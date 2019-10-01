@@ -41,11 +41,8 @@
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="agent.html" class="nav-link">Agent</a></li>
-	          <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
-	          <li class="nav-item"><a href="properties.html" class="nav-link">Properties</a></li>
-	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -58,49 +55,39 @@
         <div class="row no-gutters slider-text justify-content-center align-items-center">
           <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-end">
           	<!-- partial:index.partial.html -->
-<div class="booking-form">
-      <div class="tab-content">
-        <div id="single">   
-          <h1 class='booking-header' style='color:white'>Book unique places to stay and things to do.
-        </h1>
-          
-          <form action="/" method="post">
-          <div class="field-wrap">
-                      <input id="search_term" aria-autocomplete="list" aria-expanded="false" autocomplete="off" autocorrect="off" spellcheck="false" id="Koan-magic-carpet-koan-search-bar__input" role="combobox" data-veloute="input__Koan-magic-carpet-koan-search-bar__input" name="query" placeholder="Anywhere">
-            
+            <div class="booking-form">
+              <div class="tab-content">
+                <div id="single">
+                  <h1 class='booking-header' style="color:white;">Book unique places to stay and things to do</h1>
+                  <form action="/" method="post">
+                    <div class="field-wrap">
+                      <input id="search_term" aria-autocomplete="list" aria-expanded="false" autocomplete="off"
+                                autocorrect="off" spellcheck="false" id="Koan-magic-carpet-koan-search-bar__input"
+                                role="combobox" data-veloute="input__Koan-magic-carpet-koan-search-bar__input" name="query"
+                                placeholder="Anywhere">
+                    </div>
+                    <div calss='date'>
+                      <div class="top-row">
+                        <div id="datepicker" class=" field-wrap input-group date" data-date-format="mm-dd-yyyy">
+                          <input class="form-control" type="text" readonly/>
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                        </div>
+                        <div id="datepicker1" class=" field-wrap input-group date" data-date-format="mm-dd-yyyy">
+                          <input class="form-control" type="text" readonly/>
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="submit" id='search12'class="button button-block"/>Search</button>
+                  </form>
+                </div>
+              </div>
             </div>
-        
-     <div calss='date'>
-          <div class="top-row">
-             <div id="datepicker" class=" field-wrap input-group date"         data-date-format="mm-dd-yyyy">
-      <input class="form-control" type="text" readonly />
-      <span class="input-group-addon"><i class="glyphicon           glyphicon-calendar"></i></span>
-  </div>
-            
-            <div id="datepicker1" class=" field-wrap input-group date"         data-date-format="mm-dd-yyyy">
-      <input class="form-control" type="text" readonly />
-      <span class="input-group-addon"><i class="glyphicon           glyphicon-calendar"></i></span>
-  </div>
-            </div> 
-            </div>
-            
-    
-            
-          <button type="submit" id='search12'class="button button-block"/>Search</button>
-          </form>
-        </div>
-  
-
-
-
-				              </div>
-			              </div>
-		        		
-      </div>
-      <div class="mouse">
-				<a href="#" class="mouse-icon">
-					<div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
-				</a>
+          </div>
+          <div class="mouse">
+            <a href="#" class="mouse-icon">
+              <div class="mouse-wheel"><span class="ion-ios-arrow-round-down"></span></div>
+            </a>
 			</div>
     </div>
 
@@ -609,10 +596,7 @@
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script></p>
           </div>
         </div>
       </div>
@@ -645,10 +629,10 @@
 
 
 <script>
-  
+
 
   $('.form').find('input, textarea').on('keyup blur focus', function (e) {
-  
+
   var $this = $(this),
       label = $this.prev('label');
 
@@ -660,15 +644,15 @@
         }
     } else if (e.type === 'blur') {
       if( $this.val() === '' ) {
-        label.removeClass('active highlight'); 
+        label.removeClass('active highlight');
       } else {
-        label.removeClass('highlight');   
-      }   
+        label.removeClass('highlight');
+      }
     } else if (e.type === 'focus') {
-      
+
       if( $this.val() === '' ) {
-        label.removeClass('highlight'); 
-      } 
+        label.removeClass('highlight');
+      }
       else if( $this.val() !== '' ) {
         label.addClass('highlight');
       }
@@ -677,23 +661,23 @@
 });
 
 $('.tab a').on('click', function (e) {
-  
+
   e.preventDefault();
-  
+
   $(this).parent().addClass('active');
   $(this).parent().siblings().removeClass('active');
-  
+
   target = $(this).attr('href');
 
   $('.tab-content > div').not(target).hide();
-  
+
   $(target).fadeIn(600);
-  
+
 });
 
 $(function () {
-  $("#datepicker ,#datepicker1 , #datepicker2 , #datepicker3").datepicker({ 
-        autoclose: true, 
+  $("#datepicker ,#datepicker1 , #datepicker2 , #datepicker3").datepicker({
+        autoclose: true,
         todayHighlight: true
 
   }).datepicker('update', new Date());
@@ -709,15 +693,8 @@ function activatePlacesSearch(){
   var autocomplete =new google.maps.places.Autocomplete(input,options) ;
 }
 
-
-
 </script>
 
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiJpItFnQTP3RsN4yQ9sxi7p16L9wQru4&libraries=places&callback=activatePlacesSearch"></script>
-
-
-
-
-
   </body>
 </html>
