@@ -90,7 +90,10 @@ h1 {
   color:#ffffff;
 =======
   color:$white;
+<<<<<<< HEAD
 >>>>>>> parent of 791755c... Merge branch 'master' of https://github.com/serenarekha/RoofLand
+=======
+>>>>>>> parent of 6e3798b... Revert "Revert "CSS adjustments""
   font-weight:$thin;
   margin:0 0 40px;
 }
