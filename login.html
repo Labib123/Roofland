@@ -6,8 +6,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
-
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
@@ -28,7 +26,7 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
 
-    <link rel="stylesheet" href="css/login.css">
+    <!--<link rel="stylesheet" href="css/login.css">-->
 
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
@@ -55,100 +53,67 @@
 	    </div>
 	  </nav>
     <!-- END nav -->
-
     <div class="hero-wrap ftco-degree-bg" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay">
-      <div class="container">
-        <div class="row no-gutters slider-text justify-content-center align-items-center">
-          <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-end">
-            <!-- partial:index.partial.html -->
-            <div class="form">
+        <div class="container">
+          <div class="row no-gutters slider-text justify-content-center align-items-center">
+            <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-end">
+              <div class="booking-form">
+                <div class="form">
+                  <ul class="tab-group">
+                    <li class="tab active"><a href="#signup">Sign Up</a></li>
+                    <li class="tab"><a href="#login">Log In</a></li>
+                  </ul>
 
-      <ul class="tab-group">
-        <li class="tab active"><a href="#signup">Sign Up</a></li>
-        <li class="tab"><a href="#login">Log In</a></li>
-      </ul>
+                  <div class="tab-content">
+                    <div id="signup">
+                      <h1>Sign Up for Free</h1>
+                      <form action="/" method="post">
+                        <div class="top-row">
+                          <div class="field-wrap">
+                            <label>First Name<span class="req">*</span></label>
+                            <input type="text" required autocomplete="off" />
+                          </div>
+                          <div class="field-wrap">
+                            <label>Last Name<span class="req">*</span></label>
+                            <input type="text"required autocomplete="off"/>
+                          </div>
+                        </div>
+                        <div class="field-wrap">
+                          <label>Email Address<span class="req">*</span></label>
+                          <input type="email"required autocomplete="off"/>
+                        </div>
+                        <div class="field-wrap">
+                          <label>Set A Password<span class="req">*</span></label>
+                          <input type="password"required autocomplete="off"/>
+                        </div>
+                        <button type="submit" class="button button-block"/>Get Started</button>
+                      </form>
+                    </div>
 
-      <div class="tab-content">
-        <div id="signup">
-          <h1>Sign Up for Free</h1>
-
-          <form action="/" method="post">
-
-          <div class="top-row">
-            <div class="field-wrap">
-              <label>
-                First Name<span class="req">*</span>
-              </label>
-              <input type="text" required autocomplete="off" />
-            </div>
-
-            <div class="field-wrap">
-              <label>
-                Last Name<span class="req">*</span>
-              </label>
-              <input type="text"required autocomplete="off"/>
-            </div>
-          </div>
-
-          <div class="field-wrap">
-            <label>
-              Email Address<span class="req">*</span>
-            </label>
-            <input type="email"required autocomplete="off"/>
-          </div>
-
-          <div class="field-wrap">
-            <label>
-              Set A Password<span class="req">*</span>
-            </label>
-            <input type="password"required autocomplete="off"/>
-          </div>
-
-          <button type="submit" class="button button-block"/>Get Started</button>
-
-          </form>
-
-        </div>
-
-        <div id="login">
-          <h1>Welcome Back!</h1>
-
-          <form action="/" method="post">
-
-            <div class="field-wrap">
-            <label>
-              Email Address<span class="req">*</span>
-            </label>
-            <input type="email"required autocomplete="off"/>
-          </div>
-
-          <div class="field-wrap">
-            <label>
-              Password<span class="req">*</span>
-            </label>
-            <input type="password"required autocomplete="off"/>
-          </div>
-
-          <p class="forgot"><a href="#">Forgot Password?</a></p>
-
-          <button class="button button-block"/>Log In</button>
-
-          </form>
-
-        </div>
-
-      </div><!-- tab-content -->
-
-</div> <!-- /form -->
-                </div>
+                    <div id="login">
+                      <h1>Welcome Back!</h1>
+                      <form action="/" method="post">
+                        <div class="field-wrap">
+                          <label>Email Address<span class="req">*</span></label>
+                          <input type="email"required autocomplete="off"/>
+                        </div>
+                        <div class="field-wrap">
+                          <label>Password<span class="req">*</span></label>
+                          <input type="password"required autocomplete="off"/>
+                        </div>
+                        <p class="forgot"><a href="#">Forgot Password?</a></p>
+                        <button class="button button-block"/>Log In</button>
+                      </form>
+                    </div>
+                  </div><!-- tab-content -->
+                </div> <!-- /form -->
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
   <footer class="ftco-footer ftco-section">
       <div class="container">
