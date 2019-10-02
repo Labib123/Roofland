@@ -69,7 +69,7 @@ a {
     cursor:pointer;
     transition:.5s ease;
     &:hover {
-      background:$main-dark;
+      background-color:$main-dark;
       color:$white;
     }
   }
@@ -87,7 +87,7 @@ a {
 h1 {
   text-align:center;
   color:$white;
-  font-weight:$thin;
+  font-weight:thin;
   margin:0 0 40px;
 }
 
@@ -131,7 +131,7 @@ input, textarea {
   color:$white;
   border-radius:0;
   transition:border-color .25s ease, box-shadow .25s ease;
-  &:focus {
+  :focus {
 		outline:0;
 		border-color:$main;
   }
@@ -154,7 +154,7 @@ textarea {
     clear: both;
   }
 
-  > div {
+   div {
     float:left;
     width:48%;
     margin-right:4%;
@@ -178,7 +178,7 @@ textarea {
   transition:all.5s ease;
   -webkit-appearance: none;
   &:hover, &:focus {
-    background:$main-dark;
+    background-color:$main-dark;
   }
 }
 
