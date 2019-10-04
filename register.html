@@ -1,8 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
     <title>RoofLand</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -26,16 +24,12 @@
 
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
-
-    <link rel="stylesheet" href="css/login.css">
-
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
     <link rel="stylesheet" href="css/style.css">
   </head>
 
   <body>
-
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container">
         <a class="navbar-brand" href="index.html">RoofLand</a>
@@ -45,97 +39,78 @@
 	      </button>
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+            <li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="agent.html" class="nav-link">Officer</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-            <li class="nav-item active"><a href="login.html" class="nav-link">Login</a></li>
+            <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
+    <br><br>
     <!-- END nav -->
+
     <div class="hero-wrap ftco-degree-bg" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay">
-        <div class="container">
-          <div class="row no-gutters slider-text justify-content-center align-items-center">
-            <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-end">
-              <div class="booking-form-login">
-                <div class="form">
-                  <table class="tab-group" style="width:100%">
-                    <tr>
-                      <th>
-                        <li class="tab"><a href="#signup">Signup</a></li>
-                      </th>
-                        <th>
-                          <li class="tab"><a href="#login">Login</a></li>
-                        </th>
-                    </tr>
-                  </table>
-<!--
-                  <ul class="tab-group">
-                    <li class="tab active"><a href="#signup">Sign Up</a></li>
-                    <li class="tab"><a href="#login">Log In</a></li>
-                  </ul>
--->
-                  <div class="tab-content">
-                    <div id="signup">
-                      <h1>Signup for Free</h1><br>
-                      <form action="register.html" method="post">
-                        <div class="top-row">
-                          <div class="field-wrap">
-                            <label>Full Name<span class="req">*</span></label>
-                            <input type="text" required autocomplete="off" />
-                          </div>
-                          <div class="field-wrap">
-                            <label>Username<span class="req">*</span></label>
-                            <input type="text"required autocomplete="off"/>
-                          </div>
-                        </div>
-                        <div class="field-wrap">
-                          <label>Email Address<span class="req">*</span></label>
-                          <input type="email"required autocomplete="off"/>
-                        </div>
-                        <div class="field-wrap">
-                          <label>Password<span class="req">*</span></label>
-                          <input type="password"required autocomplete="off"/>
-                        </div>
-                        <div class="field-wrap">
-                          <label>User Type<span class="req">*</span></label>
-                          <input type="usertype"required autocomplete="off"/>
-                        </div>
-                        <div class="field-wrap">
-                          <label>Monthly Income<span class="req">*</span></label>
-                          <input type="monthlyIncome"required autocomplete="off"/>
-                          <!-- <input type="file" name="monthlyIncome" accept="document/*"> -->
-                        </div>
-                        <button type="submit" class="button button-block"/>Get Started</button>
-                      </form>
+      <div class="container">
+        <div class="row no-gutters slider-text justify-content-center align-items-center">
+          <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-end">
+            <!-- partial:index.partial.html -->
+            <div class="booking-form-setup">
+              <div class="tab-content">
+                <div id="single">
+                  <h1 class='booking-header' style="color:white;">Register New User</h1>
+                  <form action="index.html" method="post">
+                    <div class="field-wrap-setup">
+                      <input id="search_term" aria-autocomplete="list" aria-expanded="false" autocomplete="off"
+                                autocorrect="off" spellcheck="false" id="Koan-magic-carpet-koan-search-bar__input"
+                                role="combobox" data-veloute="input__Koan-magic-carpet-koan-search-bar__input" name="query"
+                                placeholder="Username">
                     </div>
 
-                    <div id="login">
-                      <h1>Welcome Back!</h1><br>
-                      <form action="/" method="post">
-                        <div class="field-wrap">
-                          <label>Email Address<span class="req">*</span></label>
-                          <input type="email"required autocomplete="off"/>
-                        </div>
-                        <div class="field-wrap">
-                          <label>Password<span class="req">*</span></label>
-                          <input type="password"required autocomplete="off"/>
-                        </div>
-                        <p class="forgot"><a href="#">Forgot Password?</a></p>
-                        <button class="button button-block"/>Log In</button>
-                      </form>
+                    <div class="field-wrap-setup">
+                      <input id="search_term" aria-autocomplete="list" aria-expanded="false" autocomplete="off"
+                                autocorrect="off" spellcheck="false" id="Koan-magic-carpet-koan-search-bar__input"
+                                role="combobox" data-veloute="input__Koan-magic-carpet-koan-search-bar__input" name="query"
+                                placeholder="Password">
                     </div>
-                  </div><!-- tab-content -->
-                </div> <!-- /form -->
+
+                    <div class="field-wrap-setup">
+                      <input id="search_term" aria-autocomplete="list" aria-expanded="false" autocomplete="off"
+                                autocorrect="off" spellcheck="false" id="Koan-magic-carpet-koan-search-bar__input"
+                                role="combobox" data-veloute="input__Koan-magic-carpet-koan-search-bar__input" name="query"
+                                placeholder="Full Name">
+                    </div>
+                    <div class="field-wrap-setup">
+                      <input id="search_term" aria-autocomplete="list" aria-expanded="false" autocomplete="off"
+                                autocorrect="off" spellcheck="false" id="Koan-magic-carpet-koan-search-bar__input"
+                                role="combobox" data-veloute="input__Koan-magic-carpet-koan-search-bar__input" name="query"
+                                placeholder="Email">
+                    </div>
+                    <div class="field-wrap-setup">
+                      <input id="search_term" aria-autocomplete="list" aria-expanded="false" autocomplete="off"
+                                autocorrect="off" spellcheck="false" id="Koan-magic-carpet-koan-search-bar__input"
+                                role="combobox" data-veloute="input__Koan-magic-carpet-koan-search-bar__input" name="query"
+                                placeholder="User Type">
+                    </div>
+                    <div class="field-wrap-setup">
+                      <input id="search_term" aria-autocomplete="list" aria-expanded="false" autocomplete="off"
+                                autocorrect="off" spellcheck="false" id="Koan-magic-carpet-koan-search-bar__input"
+                                role="combobox" data-veloute="input__Koan-magic-carpet-koan-search-bar__input" name="query"
+                                placeholder="Monthly Income">
+                    </div>
+                    <input type="file" name="pic" accept="image/*">
+                    <br>
+                    <button type="submit" id='search12'class="button button-block"/>Submit</button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
   <footer class="ftco-footer ftco-section">
       <div class="container">
@@ -224,6 +199,9 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+
+
+
 <script>
 
 

@@ -1,4 +1,9 @@
+<?php
+  include_once ('includes/connectDB.php');
 
+  sec_session_start();
+  echo "the connection works";
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -81,14 +86,14 @@
                   <div class="tab-content">
                     <div id="signup">
                       <h1>Signup for Free</h1><br>
-                      <form action="register.html" method="post">
+                      <form action="/" method="post">
                         <div class="top-row">
                           <div class="field-wrap">
-                            <label>Full Name<span class="req">*</span></label>
+                            <label>First Name<span class="req">*</span></label>
                             <input type="text" required autocomplete="off" />
                           </div>
                           <div class="field-wrap">
-                            <label>Username<span class="req">*</span></label>
+                            <label>Last Name<span class="req">*</span></label>
                             <input type="text"required autocomplete="off"/>
                           </div>
                         </div>
@@ -99,15 +104,6 @@
                         <div class="field-wrap">
                           <label>Password<span class="req">*</span></label>
                           <input type="password"required autocomplete="off"/>
-                        </div>
-                        <div class="field-wrap">
-                          <label>User Type<span class="req">*</span></label>
-                          <input type="usertype"required autocomplete="off"/>
-                        </div>
-                        <div class="field-wrap">
-                          <label>Monthly Income<span class="req">*</span></label>
-                          <input type="monthlyIncome"required autocomplete="off"/>
-                          <!-- <input type="file" name="monthlyIncome" accept="document/*"> -->
                         </div>
                         <button type="submit" class="button button-block"/>Get Started</button>
                       </form>
