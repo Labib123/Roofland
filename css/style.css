@@ -10219,3 +10219,10 @@ textarea {
 .booking-form-login .button:hover, .booking-form-login .button:focus {
   background: #eb00bc;
 }
+
+.applicationTable{
+  text-align: center;
+  text-overflow: clip;
+  max-width:100%;
+  min-height: inherit;
+}
