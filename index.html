@@ -66,18 +66,19 @@
                                 role="combobox" data-veloute="input__Koan-magic-carpet-koan-search-bar__input" name="query"
                                 placeholder="Anywhere">
                     </div>
-                    <div calss='date'>
-                      <div class="top-row">
-                        <div id="datepicker" class=" field-wrap input-group date" data-date-format="mm-dd-yyyy">
-                          <input class="form-control" type="text" readonly/>
-                          <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                    <div class="price">
+                        <div class="dropdown">
+                          <select name="price" class="btn-dropdown" data-toggle="dropdown">
+                            <option value="" disabled selected>Price</option>
+                            <option value="500">RM0-500</option>
+                            <option value="800">RM500-800</option>
+                            <option value="1000">RM800-1000</option>
+                            <option value="1200">RM100-1200</option>
+                            <option value="1500">RM1200-1500</option>
+                          </select>
                         </div>
-                        <div id="datepicker1" class=" field-wrap input-group date" data-date-format="mm-dd-yyyy">
-                          <input class="form-control" type="text" readonly/>
-                          <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                        </div>
-                      </div>
                     </div>
+                    <br>
                     <button type="submit" id='search12'class="button button-block"/>Search</button>
                   </form>
                 </div>
