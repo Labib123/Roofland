@@ -93,19 +93,20 @@
                             <label>Password<span class="req">*</span></label>
                             <input type="password"required autocomplete="off"/>
                           </div>
-
                           <div class="field-wrap">
-                            <label>User Type<span class="req">*</span></label>
-                              <input type="radio" name="type" value="HousingOfficer" checked> Housing Officer
-                              <input type="radio" name="type" value="Applicant"> Applicant
+                            <label>Salary<span class="req">*</span></label>
+                            <input type="text"required autocomplete="off"/>
+                          </div>
+                          <div class="field-wrap">
+                            <div class="checkbox-label">User Type </div>
                           </div>
 
                           <div class="field-wrap">
-                            <label>Monthly Income<span class="req">*</span></label>
-                            <input type="password"required autocomplete="off"/>
+                              <div class="">
+                                <input type="checkbox" class="col-md-6 checkbox form-check-input" id="checkBox1">
+                              </div>
                           </div>
-
-                          <button type="submit" class="button button-block"/>Get Started</button>
+                          <button type="submit" id="submit"class=" button button-block"/>Get Started</button>
                           </form>
                         </div>
 
@@ -211,6 +212,23 @@
   <script src="js/main.js"></script>
 <script>
 
+  // javascript for radio button gender type
+        var types = document.getElementById('type').value;
+        var type_value;
+
+        if(document.getElementById('r1').checked)
+        {
+            type_value = document.getElementById('r1').value;
+            alert("r1");
+        }
+
+
+        else if(document.getElementById('r2').checked)
+        {
+            type_value = document.getElementById('r2').value;
+        }
+        document.getElementById('results').innerHTML = type_value;
+// ////////////////////////////////////////////////////////////////
 
   $('.form').find('input, textarea').on('keyup blur focus', function (e) {
 

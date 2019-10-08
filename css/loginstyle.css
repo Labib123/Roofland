@@ -158,6 +158,8 @@ textarea {
   text-align: right;
 }
 
-.radio-button{
-  
+.checkbox-label{
+  display: block;
+  margin-bottom: 50px;
 }
+#submit{margin-top:50px}
