@@ -32,6 +32,7 @@
 
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+
     <link rel="stylesheet" href="css/style.css">
   </head>
 
@@ -98,18 +99,27 @@
                             <label>Salary<span class="req">*</span></label>
                             <input type="text"required autocomplete="off"/>
                           </div>
-                          <div class="field-wrap">
-                            <div class="checkbox-label">User Type </div>
-                          </div>
+                          <form class="" action="index.html" method="post">
 
-                          <div class="field-wrap">
-                              <div class="">
-                                <input type="checkbox" class="col-md-6 checkbox form-check-input" id="checkBox1">
+                          <div style="margin-bottom:30px" class="col-md-12">
+                            <div  style="color: rgba(255, 255, 255,0.5);font-size:20px; font-weight:bold " class="col-md-4">
+                              User type :
+                            </div>
+                            <div style="color:rgba(255, 255, 255,0.5) ;"class="col-md-2"> Applicant </div>
+                              <div class="col-md-2">
+                                <input name='optradio' type="radio" class="col-md-6 radio form-check-input" id="checkBox1">
                               </div>
+                              <div  style="color: rgba(255, 255, 255,0.5) ;" class="col-md-2">Housing Officer </div>
+                                <div class="col-md-2">
+                                  <input name='optradio' type="radio" class="col-md-6 radio form-check-input" id="checkBox1">
+                                </div>
                           </div>
-                          <button type="submit" id="submit"class=" button button-block"/>Get Started</button>
+                          <div class="">
+                            <button type="submit" id="submit"class=" button button-block"/>Get Started</button>
+                          </div>
                           </form>
                         </div>
+                      </form>
 
                         <div id="login">
                           <h1>Welcome Back!</h1><br>
