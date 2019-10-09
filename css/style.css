@@ -10092,8 +10092,9 @@ textarea {
 
 .booking-form-setup {
   background: rgba(19, 35, 47, 0.9);
-  padding: 40px;
+  padding: 30px;
   max-width:900px;
+  width:900px;
   margin: 40px auto;
   border-radius: 4px;
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
@@ -10279,4 +10280,16 @@ textarea {
 
 .booking-form-profileApp label.highlight {
   color: #ffffff;
+}
+
+.facility-table{
+  width:500px;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  text-align:center;
+}
+
+.facility-table p{
+  color:white;
 }
