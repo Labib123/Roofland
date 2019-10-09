@@ -10239,3 +10239,44 @@ textarea {
 .btn-dropdown:hover, .btn-dropdown:focus{
   border-color: #e86ed0;
 }
+
+
+.booking-form-profileApp{
+  background: rgba(19, 35, 47, 0.9);
+  padding: 20px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+  font-family: 'Titillium Web', sans-serif;
+}
+
+.booking-form-profileApp label {
+  position: absolute;
+  -webkit-transform: translateY(6px);
+          transform: translateY(6px);
+  left: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.25s ease;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  font-size: 22px;
+}
+.booking-form-profileApp label .req {
+  margin: 2px;
+  color: #e86ed0;
+}
+
+.booking-form-profileApp label.active {
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+  left: 2px;
+  font-size: 14px;
+}
+.booking-form-profileApp label.active .booking-form-profileApp .req {
+  opacity: 0;
+}
+
+.booking-form-profileApp label.highlight {
+  color: #ffffff;
+}
