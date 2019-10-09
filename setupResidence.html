@@ -100,7 +100,7 @@
                     </div>
                     <input type="file" name="pic" accept="image/*">
                     <br>
-                    <button type="submit" id='search12'class="button button-block"/>Submit</button>
+                    <button type="submit" id='search12' class="button button-block" onclick="show_alert();"/>Submit</button>
                   </form>
                 </div>
               </div>
@@ -251,6 +251,10 @@ var options = {
 function activatePlacesSearch(){
   var input = document.getElementById('search_term');
   var autocomplete =new google.maps.places.Autocomplete(input,options) ;
+}
+
+function show_alert() {
+  alert("Residence Created");
 }
 
 </script>
