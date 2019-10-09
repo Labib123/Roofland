@@ -3,7 +3,8 @@
 
   sec_session_start();
   echo "the connection works";
-?>
+// ?>test
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
