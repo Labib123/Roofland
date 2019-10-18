@@ -2075,7 +2075,7 @@ fieldset:disabled a.btn {
   border-color: #e86ed0; }
   .btn-primary:hover {
     color: #fff;
-    background-color: #0069d9;
+    background-color: #eb00bc;
     border-color: #0062cc; }
   .btn-primary:focus, .btn-primary.focus {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
@@ -10152,6 +10152,12 @@ textarea {
   background: #eb00bc;
 }
 
+.booking-form-setup h2{
+  left: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 22px;
+}
+
 .field-wrap-setup {
   position: relative;
   margin-bottom: 20px;
@@ -10159,17 +10165,17 @@ textarea {
 
 .booking-form-login {
   background: rgba(19, 35, 47, 0.9);
-  padding: 0px;
-  max-width:1000px;
   max-height:800px;
-  width: 630px;
-  height: 700px;
+  width: 900px;
+  height: 690px;
   margin: 40px auto;
   border-radius: 4px;
   box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
   font-family: 'Titillium Web', sans-serif;
 }
-
+.form-login{
+  padding: 23px;
+}
 .booking-form-login label {
   position: absolute;
   -webkit-transform: translateY(6px);
@@ -10179,7 +10185,7 @@ textarea {
   transition: all 0.25s ease;
   -webkit-backface-visibility: hidden;
   pointer-events: none;
-  font-size: 22px;
+  font-size: 20px;
 }
 
 .booking-form-login label .req {
@@ -10270,7 +10276,6 @@ textarea {
 
 .booking-form-profileApp label.active {
   -webkit-transform: translateY(50px);
-          transform: translateY(50px);
   left: 2px;
   font-size: 14px;
 }
@@ -10292,4 +10297,82 @@ textarea {
 
 .facility-table p{
   color:white;
+}
+
+.fa-check{
+  color: #65DB4B;
+}
+
+.fa-times-circle{
+  color: red;
+}
+
+
+input, textarea {
+
+  color:black;
+}
+
+.profile-user-info{
+  margin: 40px;
+}
+
+.applyResidence .button{
+  border: 0;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  background: #e86ed0;
+  color: #ffffff;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+  margin-left:350px;
+  margin-top:50px;
+}
+
+
+.applyResidence .button:hover, .applyResidence .button:focus {
+  background: #eb00bc;
+}
+
+.btn-dropdown-location{
+  width:100%;
+  font-size: 25px;
+  background-color: inherit;
+  padding-left: 6px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.btn-dropdown-location:hover, .btn-dropdown-location:focus{
+  border-color: #e86ed0;
+}
+
+.facilitiesTable{
+
+  align-items: center;
+  padding-left: 2px;
+  margin-right: 2rem; }
+
+}
+.btn-dropdown-faciliies{
+  width:100%;
+  font-size: 19px;
+  background-color: white;
+  padding-left: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.btn-dropdown-facilities:hover, .btn-dropdown-facilities:focus{
+  border-color: #e86ed0;
+}
+
+.btn-dropdown-facilities option:hover{
+  background-color: white;
+  color:black;
 }

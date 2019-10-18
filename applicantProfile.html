@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <title>RoofLand</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -23,12 +27,8 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-
-    <style>
-      li{
-        font-size: 20px;
-      }
-    </style>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" type="text/css" href="css/applicantProfile.css">
   </head>
 
   <body>
@@ -42,109 +42,119 @@
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
             <li class="nav-item"><a href="agent.html" class="nav-link">Officer</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
             <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
     <!-- END nav -->
     <section class="hero-wrap hero-wrap-2 ftco-degree-bg js-fullheight" style="background-image: url('images/giovany3.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate pb-5 text-center">
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>FAQ <i class="ion-ios-arrow-forward"></i></span></p>
-            <h1 class="mb-3 bread" style="color:black;">FAQ</h1>
+          	<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Applications <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-3 bread" style="color:black;">Applicant Profile</h1>
           </div>
         </div>
       </div>
     </section>
-    <!-- END background and title -->
     <br>
-    <!-- Question 1 -->
-    <h2 class="img mx-md-5">1. How do I apply for a Residence?</h2>
-    <section class="ftco-section ftco-degree-bg services-section img mx-md-5" style="background-image: url(images/bg_2.jpg);">
-      <div class="overlay"></div>
+    <!-- START Applicant Profile -->
+    <div style="margin:100px;">
       <div class="container">
-        <div class="row justify-content-start mb-5">
-          <div class="col-md-6 text-center heading-section heading-section-white ftco-animate">
-            <span class="subheading">Work flow</span>
-            <h2 class="mb-3">How it works</h2>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-md-6">
-            <div class="row">
-              <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                <div class="media block-6 services services-2">
-                  <div class="media-body py-md-4 text-center">
-                    <div class="icon mb-3 d-flex align-items-center justify-content-center"><span>01</span></div>
-                    <h3>Search Residence</h3>
-                    <p>Enter location name and desired price to find residences which fit your criteria</p>
-                  </div>
+        <div class="row profile">
+          <div class="col-md-3">
+            <div class="profile-sidebar">
+              <!-- SIDEBAR USERPIC -->
+              <div class="profile-userpic">
+                <img class=''src="http://bootdey.com/img/Content/avatar/avatar6.png" class="img-responsive" alt="">
+              </div>
+              <!-- END SIDEBAR user name
+              USERPIC -->
+              <!-- SIDEBAR USER TITLE -->
+              <div class="profile-usertitle">
+                <div class="profile-usertitle-name">
+                  Labib Mansour
                 </div>
               </div>
-              <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                <div class="media block-6 services services-2">
-                  <div class="media-body py-md-4 text-center">
-                    <div class="icon mb-3 d-flex align-items-center justify-content-center"><span>02</span></div>
-                    <h3>Apply to Reside</h3>
-                    <p>Apply to the housing officer to reside in your chosen residence. Remember to login/signup before submitting your application</p>
-                  </div>
-                </div>
+              <!-- END SIDEBAR USER TITLE -->
+              <!-- SIDEBAR BUTTONS -->
+              <div class="profile-userbuttons">
+                <i id="rejected" style="display: none;" class="fa fa-ban fa-5x" aria-hidden="true"></i>
+                <i id="accepted" style="display: none;" class="fa fa-check-circle fa-5x center" aria-hidden="true"></i>
+                <button id='accept'onclick='accepted()' type="button"
+                        class="btn btn-success btn-sm">Accept</button>
+                <button id='reject' onclick='alert("Applicant is successfully Rejected ");
+                        document.getElementById("rejected").style.display="block"; this.style.display="none";
+                        document.getElementById("accept").style.display="none"' type="button"
+                        class="btn btn-danger btn-sm">Reject</button>
               </div>
-              <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                <div class="media block-6 services services-2">
-                  <div class="media-body py-md-4 text-center">
-                    <div class="icon mb-3 d-flex align-items-center justify-content-center"><span>03</span></div>
-                    <h3>Status of Application</h3>
-                    <p>Check the status of your application to see if it has been accepted!</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
-                <div class="media block-6 services services-2">
-                  <div class="media-body py-md-4 text-center">
-                    <div class="icon mb-3 d-flex align-items-center justify-content-center"><span>04</span></div>
-                    <h3>Close the Deal</h3>
-                    <p>Congradulations! Now you have an affordable place to live in</p>
-                  </div>
-                </div>
-              </div>
+              <!-- END SIDEBAR BUTTONS -->
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-    <br>
-    <!-- Question 2 -->
-    <div class="img mx-md-5">
-      <h2 >2. How do I put my house for lease?</h2>
-        <ul>
-          <li> Create a housing officer account</li>
-          <li> Upon creation, you will be redirected to your profile page where you can create a new residence</li>
-        </ul>
+          <div id='durationArea' class="row">
+            <div id="section1" class="col-md-2">
+              <div class="profile-user-info">
+                <!-- Row 1: Username -->
+                <div class="profile-info-row">
+                  <div class="profile-info-name">Username</div>
+                  <div class="profile-info-value">
+                    <span>Labib123</span>
+                  </div>
+                </div>
+                <!-- Row 2: Full Name -->
+                <div class="profile-info-row">
+                  <div class="profile-info-name">Full Name</div>
+                  <div class="profile-info-value">
+                    <span>Labib Mansour</span>
+                  </div>
+                </div>
+                <!-- Row 3: Monthly Salary -->
+                <div class="profile-info-row">
+                  <div class="profile-info-name">Monthly Salary (RM)</div>
+                  <div class="profile-info-value">
+                    <span>2000</span>
+                  </div>
+                </div>
+                <!-- Row 4: Residence ID -->
+                <div class="profile-info-row">
+                  <div class="profile-info-name">ResidenceID</div>
+                  <div class="profile-info-value">
+                    <span>R123</span>
+                  </div>
+                </div>
+                <!-- Row 4: Month -->
+                <div class="profile-info-row">
+                  <div class="profile-info-name">Month</div>
+                  <div class="profile-info-value">
+                    <span>08</span>
+                  </div>
+                </div>
+                <!-- Row 5: Year -->
+                <div class="profile-info-row">
+                  <div class="profile-info-name">Year</div>
+                  <div class="profile-info-value">
+                    <span>2019</span>
+                  </div>
+                </div>
+                <!-- Row 6: Monthly Rent -->
+                <div class="profile-info-row">
+                  <div class="profile-info-name">Monthly Rent</div>
+                  <div class="profile-info-value">
+                    <span>RM800</span>
+                  </div>
+                </div>
+              </div> <!--END profilr-user-info -->
+            </div> <!-- END section1 -->
+          </div> <!-- END durationArea -->
+        </div> <!-- End row profile -->
+      </div> <!-- END container -->
     </div>
-    <br>
-    <!-- Question 3 -->
-    <div class="img mx-md-5">
-      <h2>3. How do I know if my application was approved?</h2>
-      <ul>
-        <li>Check the application status of your application in "My Applications"</li>
-      </ul>
-    </div>
-    <br>
-    <!-- Question 4 -->
-    <div class="img mx-md-5">
-      <h2>4. If my application was rejected, am I allowed to submit again?</h2>
-      <ul>
-        <li>Yes, you may appeal your application again</li>
-      </ul>
-    </div>
-
+    <!-- END Profile -->
     <footer class="ftco-footer ftco-section">
       <div class="container">
         <div class="row mb-5">
@@ -217,6 +227,42 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script type="js/profilescript.js"></script>
+
+  <script src="js/viewApplications.js"></script>
+  <script type="text/javascript">
+
+
+
+ function accepted() {
+  alert("Applicant is successfully accepted ");
+  document.getElementById("accept").style.display="none" ;
+  document.getElementById("accepted").style.display="block";
+  document.getElementById("reject").style.display="none" ;
+  var section1 = document.getElementById('section1') ;
+  section1.style.display='none' ;
+  document.getElementById('section2').style.display='none' ;
+  var duration =  document.createElement('DIV');
+  duration.className = 'duration' ;
+  duration.innerHTML = `
+
+  <div class="dropdown">
+  <div> Duration: </div>
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+    Please enter the Duration
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">12 Month </a>
+    <a class="dropdown-item" href="#">18 Month</a>
+  </div>
+</div>
+
+  ` ;
+  var area = document.getElementById('durationArea') ;
+  area.appendChild(duration);
+
+}
+  </script>
 
   </body>
 </html>
