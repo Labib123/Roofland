@@ -7,15 +7,7 @@ error_reporting(E_ALL);
 $connection=mysqli_connect("localhost","root","","roofland");
 
 // initializing variables
-if (isset ($_POST['fullname'], $_POST['username'], $_POST['email'], $_POST['password'],
-$_POST['userType'], $_POST['monthlyIncome'])){
-$username = $_POST['username'];
-$fullname = $_POST['fullname'];
-$email = $_POST['email'];
-$userType = $_POST['userType'];
-$password =$_POST['password'];
-$monthlyIncome = $_POST['monthlyIncome'];
-}
+
 
 $errors = array();
 
@@ -23,6 +15,16 @@ $errors = array();
 
 if (isset($_POST['applicant_reg']))
 {
+  //
+  // if (isset ($_POST['fullname'], $_POST['username'], $_POST['email'], $_POST['password'],
+  // $_POST['userType'], $_POST['monthlyIncome'])){
+  $username = $_POST['username'];
+  $fullname = $_POST['fullname'];
+  $email = $_POST['email'];
+  $userType = $_POST['userType'];
+  $password =$_POST['password'];
+  $monthlyIncome = $_POST['monthlyIncome'];
+
 
   echo ("im working");
 
@@ -31,19 +33,9 @@ if (isset($_POST['applicant_reg']))
   echo("var dump success");
 
 
-  {
-      // Sanitize and validate the data passed in
-      // $fullname = mysqli_real_escape_string($connection, $_POST['fullname']);
-      // $username = mysqli_real_escape_string($connection, $_POST['username']);
-      // $email = mysqli_real_escape_string($connection, $_POST['emailname']);
-      // $password = mysqli_real_escape_string($connection, $_POST['password']);
-      // $userType = mysqli_real_escape_string($connection, $_POST['userType']);
-      // $monthlyIncome = mysqli_real_escape_string($connection, $_POST['monthlyIncome']);
-
       echo (" NAME " . $_POST['fullname']);
 
       $username = filter_input(INPUT_POST, 'username', FILTER_SANITIZE_STRING);
-
       $fullname = filter_input(INPUT_POST, 'fullname', FILTER_SANITIZE_STRING);
       $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
       $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
@@ -68,8 +60,12 @@ if (isset($_POST['applicant_reg']))
     	mysqli_query($connection, $query);
     	$_SESSION['username'] = $username;
     	$_SESSION['success'] = "You are now logged in";
-    	// header('location: profileApplicant.php');
-
+    	header('location: profileApplicant.php');
+      // }
+      // else
+      // {
+      //   echo "not working";
+      // }
 }
 
 
@@ -83,6 +79,7 @@ if (isset($_POST['officer_reg']))
   $email = mysqli_real_escape_string($connection, $_POST['email']);
   $password = mysqli_real_escape_string($connection, $_POST['password']);
   $userType = mysqli_real_escape_string($connection, $_POST['userType']);
+  $monthlyIncome = mysqli_real_escape_string($connection, $_POST['monthlyIncome']);
 
 
   // // form validation: ensure that the form is correctly filled ...
@@ -138,6 +135,7 @@ if (isset($_POST['login_applicant'])) {
   $password = mysqli_real_escape_string($connection, $_POST['password']);
 
 
+
   if (empty($username)) {
   	array_push($errors, "Username is required");
   }
@@ -146,6 +144,7 @@ if (isset($_POST['login_applicant'])) {
   }
   else
   {
+
   	// if both fields are filled, then only check is username and password is already created and match it
   	$query = "SELECT * FROM applicant WHERE username='$username' AND password='$password'";
   	$results = mysqli_query($connection, $query);
@@ -159,7 +158,7 @@ if (isset($_POST['login_applicant'])) {
   	}
   }
 }
-}
+
 
 
 ?>
