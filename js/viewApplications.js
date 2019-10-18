@@ -1,9 +1,9 @@
 var table = document.getElementById('table') ;
 // populate table's rows in JavaScript array
 var array = [
-             [,'R123','Twins',2,1500,'Aishath Junana',2000,'August','<i class="fas fa-check"></i>'],
-             [,'R354','Prima 16',3,850,'Serena Rekha',2100,'May','<i class="fas fa-hourglass"></i>'],
-             [,'R980','The ARC',2,550,'Aminath Junaina',2000,'January','<i class="far fa-times-circle"></i>']
+             [,'R123','Twins',2,1500,'Aishath Junana',2000,'August',2020,'<i class="fas fa-check"></i>'],
+             [,'R354','Prima 16',3,850,'Serena Rekha',2100,'May',2019,'<i class="fas fa-hourglass"></i>'],
+             [,'R980','The ARC',2,550,'Aminath Junaina',2000,'January',2020,'<i class="far fa-times-circle"></i>']
            ] ;
     // The purpose of this for loop is to number the rows (e.g : if we add one row it will numeber it as 4 )
 for(i=0 ; i<3 ; i++){
