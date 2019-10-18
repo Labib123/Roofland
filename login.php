@@ -117,7 +117,7 @@ include("connectDB.php");
                           </div>
                           <div class="field-wrap">
                             <label>Salary<span class="req">*</span></label>
-                            <input type="decimal" name="monthlyincome" required autocomplete="off"/>
+                            <input type="decimal" name="monthlyIncome" required autocomplete="off"/>
                           </div>
                           <!-- <form class="" action="index.html" method="post"> -->
 
