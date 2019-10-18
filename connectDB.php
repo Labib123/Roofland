@@ -161,5 +161,28 @@ if (isset($_POST['login_applicant'])) {
 }
 }
 
+//Jun's codes
+if (isset($_POST['add_residence'])){
+  // assigning value into variable
+  // escape_string ($connection,post[variable])
+  $residenceName = mysqli_real_escape_string($connection, $_POST['residenceName']);
+  $location = mysqli_real_escape_string($connection, $_POST['location']);
+  $monthlyRent = mysqli_real_escape_string($connection, $_POST['monthlyRent']);
+  $mySelect = mysqli_real_escape_string($connection, $_POST['mySelect']);
+  $sizeperUnit = mysqli_real_escape_string($connection, $_POST['sizeperUnit']);
+  $numofUnits = mysqli_real_escape_string($connection, $_POST['numofUnits']);
+
+  // inject values into SQL
+  $query =  "INSERT INTO residence (residenceName, location,monthlyRent, mySelect, sizeperUnit, numofUnits)
+        VALUES('$residenceName', '$location', '$monthlyRent', '$mySelect', '$sizeperUnit', '$numofUnits')";
+  echo($query);
+
+  mysqli_query($connection, $query); // sending to the sql
+
+// header('location: setupResidence.php');
+}
+else {
+  echo "isset post not working";
+}
 
 ?>

@@ -1,3 +1,8 @@
+<?php
+  include("connectDB.php");
+  // $username = $_SESSION['username'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -60,8 +65,7 @@
               <div class="tab-content">
                 <div id="single">
                   <h1 class='booking-header' style="color:white;">Setup Residence</h1>
-                  <form action="/" method="post">
-
+                  <form action = "setupResidence.php" method="post">
                     <div class="form-row">
                       <div class="col">
                         <div class="field-wrap-setup"> <!-- Residence Name -->
@@ -130,7 +134,7 @@
                         <div class="dropdown">
                           <div id='btn' class="btn-dropdown-facilities">
                             <p style="color:white;">Press CTRL to select multiple options at once</p>
-                            <select id="mySelect" name="mySelect"  class="btn-dropdown-location">
+                            <select id="mySelect" name="mySelect" class="btn-dropdown-location">
                               <option value="" disabled selected>Select Facilities</option>
                               <option value="pool">Swimming Pool</option>
                               <option value="gym">Gym</option>
@@ -150,7 +154,7 @@
                       </div>
                     </div>
                     <br>
-                    <button type="submit" name="add_residence" class="button button-block" onclick="show_alert();"/>Submit</button>
+                    <button type="submit" name="add_residence" class="button button-block" onclick="show_alert();">Submit</button>
                   </form>
                 </div>
               </div>
