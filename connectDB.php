@@ -178,7 +178,5 @@ if (isset($_POST['add_residence'])){
   }else{
     echo "Error " .mysqli_error($connection);
   }
-  }else{
-    echo "neiiii";
-  }
+}
 ?>
