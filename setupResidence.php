@@ -1,6 +1,6 @@
 <?php
   include("connectDB.php");
-  // $username = $_SESSION['username'];
+  //$username = $_SESSION['username'];
 ?>
 
 <!DOCTYPE html>
@@ -30,15 +30,15 @@
     <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
     <link rel="stylesheet" href="css/style.css">
-
   </head>
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
       <div class="container">
-        <a class="navbar-brand" href="index.html"><img src="images/fav1.png" alt="RoofLand" width="115px"></img></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-                aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/fav1.png" alt="RoofLand" width="115px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav">
           <span class="oi oi-menu"></span> Menu
 	      </button>
         <div class="collapse navbar-collapse" id="ftco-nav">
@@ -65,20 +65,18 @@
               <div class="tab-content">
                 <div id="single">
                   <h1 class='booking-header' style="color:white;">Setup Residence</h1>
-                  <form action = "setupResidence.php" method="post">
+                  <form action = "connectDB.php" method="post">
                     <div class="form-row">
                       <div class="col">
                         <div class="field-wrap-setup"> <!-- Residence Name -->
-                          <input required id="residenceName" name="residenceName" aria-autocomplete="list" aria-expanded="false" autocomplete="off"
-                                    autocorrect="off" spellcheck="false" id="Koan-magic-carpet-koan-search-bar__input"
-                                    role="combobox" data-veloute="input__Koan-magic-carpet-koan-search-bar__input"
-                                    placeholder="Residence Name" style="color:white;">
+                          <input required id="residenceName" name="residenceName"
+                                spellcheck="false" placeholder="Residence Name" style="color:white;">
                         </div>
                       </div>
                       <div class="col">
                         <div class="field-wrap-setup">
-                          <div required class="dropdown">
-                            <select name="location" id = "location" class="btn-dropdown-location" data-toggle="dropdown">
+                          <div class="dropdown">
+                            <select required name="location" id="location" class="btn-dropdown-location" data-toggle="dropdown">
                               <option value="" disabled selected>Location</option>
                               <option value="l1">Selangor</option>
                               <option value="l2">Penang</option>
@@ -98,55 +96,45 @@
                         </div>
                       </div>
                     </div>
-
                     <div class="form-row">
                       <div class="col">
                         <div class="field-wrap-setup"> <!-- Number of Units -->
-                          <input required id="numofUnits" name="numofUnits" aria-autocomplete="list" aria-expanded="false" autocomplete="off"
-                                    autocorrect="off" spellcheck="false" id="Koan-magic-carpet-koan-search-bar__input"
-                                    role="combobox" data-veloute="input__Koan-magic-carpet-koan-search-bar__input"
-                                    placeholder="Number of Units" style="color:white;">
+                          <input type="number" required id="numofUnits" name="numofUnits"
+                                 spellcheck="false" placeholder="Number of Units" style="color:white;">
                         </div>
                       </div>
                       <div class="col">
                         <div class="field-wrap-setup"> <!-- Monthly Rent -->
-                          <input required id="monthlyRent" name="monthlyRent" aria-autocomplete="list" aria-expanded="false" autocomplete="off"
-                                    autocorrect="off" spellcheck="false" id="Koan-magic-carpet-koan-search-bar__input"
-                                    role="combobox" data-veloute="input__Koan-magic-carpet-koan-search-bar__input"
-                                    placeholder="Monthly Rent (RM)" style="color:white;">
+                          <input type="number" required id="monthlyRent" name="monthlyRent"
+                                spellcheck="false" placeholder="Monthly Rent (RM)" style="color:white;">
                         </div>
                       </div>
                     </div>
-
                     <div class="form-row">
                       <div class="col">
                         <div class="field-wrap-setup"> <!-- Size per Unit -->
-                          <input required id="sizeperUnit" name="sizeperUnit" aria-autocomplete="list" aria-expanded="false" autocomplete="off"
-                                    autocorrect="off" spellcheck="false" id="Koan-magic-carpet-koan-search-bar__input"
-                                    role="combobox" data-veloute="input__Koan-magic-carpet-koan-search-bar__input"
-                                    placeholder="Size per Unit (sqr ft)" style="color:white;">
+                          <input type="number" required id="sizeperUnit" name="sizeperUnit"
+                                  spellcheck="false" placeholder="Size per Unit (sqr ft)" style="color:white;">
                         </div>
                       </div>
                     </div>
-
-                    <form class="field-wrap" id="myFacilities"> <!-- Facilities -->
-                      <div class="field-wrap-setup">
-                        <div class="dropdown">
-                          <div id='btn' class="btn-dropdown-facilities">
-                            <p style="color:white;">Press CTRL to select multiple options at once</p>
-                            <select id="mySelect" name="mySelect" class="btn-dropdown-location">
-                              <option value="" disabled selected>Select Facilities</option>
-                              <option value="pool">Swimming Pool</option>
-                              <option value="gym">Gym</option>
-                              <option value="cafeteria">Cafeteria</option>
-                              <option value="squash_court">Squash Court</option>
-                              <option value="bbq">BBQ pit</option>
-                              <option value="familyMart">Family Mart</option>
-                            </select>
-                          </div>
+                    <!-- Facilities -->
+                    <div class="field-wrap-setup">
+                      <div class="dropdown">
+                        <div id='btn' class="btn-dropdown-facilities">
+                          <p style="color:white;">Press CTRL to select multiple options at once</p>
+                          <select id="mySelect" name="mySelect" class="btn-dropdown-location" style="font-size:23px">
+                            <option value="" disabled selected>Select Facilities</option>
+                            <option value="pool">Swimming Pool</option>
+                            <option value="gym">Gym</option>
+                            <option value="cafeteria">Cafeteria</option>
+                            <option value="squash_court">Squash Court</option>
+                            <option value="bbq">BBQ pit</option>
+                            <option value="familyMart">Family Mart</option>
+                          </select>
                         </div>
                       </div>
-                    </form>
+                    </div>
 
                     <div class="form-row">
                       <div class="col">
@@ -154,16 +142,18 @@
                       </div>
                     </div>
                     <br>
-                    <button type="submit" name="add_residence" class="button button-block" onclick="show_alert();">Submit</button>
+                    <button type="submit" name="add_residence" class="button button-block">Submit</button>
+                    <!-- <input class="button button-block" type="submit" name "add_residence" value="Submit"> -->
                   </form>
-                </div>
-              </div>
-            </div>
+                </div><!--single-->
+              </div><!-- tab content-->
+            </div><!--booking-form-setup-->
           </div>
         </div>
-      </div>
-    </div>
+      </div><!--container-->
+    </div> <!--overlay-->
   </div>
+
   <!-- Footer -->
    <footer class="ftco-footer ftco-section">
      <div class="container">
@@ -254,3 +244,21 @@
   </script>
   </body>
 </html>
+
+<?php
+  $residenceName = $_POST['residenceName'];
+  $location = $_POST['location'];
+  $monthlyRent = $_POST['monthlyRent'];
+  $mySelect = $_POST['mySelect'];
+  $sizeperUnit =$_POST['sizeperUnit'];
+  $numofUnits = $_POST['numofUnits'];
+
+  if(isset($_POST["add_residence"])){
+      if($query = mysql_query("INSERT INTO  residence (residenceName, location, monthlyRent, mySelect, sizeperUnit, numofUnits)
+                              VALUES('$residenceName', '$location', '$monthlyRent', '$mySelect','$sizeperUnit', '$numofUnits')")){
+        echo "Success";
+      }else{
+        echo "Failure";
+      }
+  }
+?>

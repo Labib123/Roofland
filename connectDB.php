@@ -122,9 +122,6 @@ if (isset($_POST['officer_reg']))
     // $_SESSION['success'] = "You are now logged in";
     // header('location: profileHousingOfficer.php');
   }
-
-
-
 }
 
 // Applicant login ////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -133,8 +130,6 @@ if (isset($_POST['login_applicant'])) {
   //to get the username and password and avoid empty space
   $username = mysqli_real_escape_string($connection, $_POST['username']);
   $password = mysqli_real_escape_string($connection, $_POST['password']);
-
-
 
   if (empty($username)) {
   	array_push($errors, "Username is required");
@@ -160,28 +155,30 @@ if (isset($_POST['login_applicant'])) {
 }
 
 
-//Jun's codes
+//--------------------Jun's codes-----------------------
 if (isset($_POST['add_residence'])){
-  // assigning value into variable
-  // escape_string ($connection,post[variable])
-  $residenceName = mysqli_real_escape_string($connection, $_POST['residenceName']);
-  $location = mysqli_real_escape_string($connection, $_POST['location']);
-  $monthlyRent = mysqli_real_escape_string($connection, $_POST['monthlyRent']);
-  $mySelect = mysqli_real_escape_string($connection, $_POST['mySelect']);
-  $sizeperUnit = mysqli_real_escape_string($connection, $_POST['sizeperUnit']);
-  $numofUnits = mysqli_real_escape_string($connection, $_POST['numofUnits']);
+  $residenceName = $_POST['residenceName'];
+  $location = $_POST['location'];
+  $monthlyRent = $_POST['monthlyRent'];
+  $mySelect = $_POST['mySelect'];
+  $sizeperUnit =$_POST['sizeperUnit'];
+  $numofUnits = $_POST['numofUnits'];
 
-  // inject values into SQL
-  $query =  "INSERT INTO residence (residenceName, location,monthlyRent, mySelect, sizeperUnit, numofUnits)
-        VALUES('$residenceName', '$location', '$monthlyRent', '$mySelect', '$sizeperUnit', '$numofUnits')";
-  echo($query);
+  // $officerID =  $_SESSION['officerID'];
+  // $query = "SELECT * FROM housingOfficer WHERE officerID=$officerID";
+  // $result = mysqli_query($query);
+  // $num_rows = mysqli_num_rows($result);
+  echo "im working";
 
-  mysqli_query($connection, $query); // sending to the sql
-
-// header('location: setupResidence.php');
-}
-else {
-  echo "isset post not working";
-}
-
+  //insert issue - Cannot add or update a child row: a foreign key constraint fails
+  $res = "INSERT INTO residence (residenceName, location, price, facilities, sizePerUnit, numOfUnit, officerID)
+           VALUES('$residenceName', '$location', '$monthlyRent', '$mySelect', '$sizeperUnit', '$numofUnits', 2)"; //2 is supposed to foerign key from the housingofficer table
+  if(mysqli_query($connection, $res)){
+    echo "Inserted";
+  }else{
+    echo "Error " .mysqli_error($connection);
+  }
+  }else{
+    echo "neiiii";
+  }
 ?>
