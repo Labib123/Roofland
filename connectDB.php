@@ -134,7 +134,10 @@ if (isset($_POST['login_applicant'])) {
   $username = mysqli_real_escape_string($connection, $_POST['username']);
   $password = mysqli_real_escape_string($connection, $_POST['password']);
 
-
+  $password = password_hash($password, PASSWORD_BCRYPT);
+  // echo " hashed" . $password;
+  // echo password_hash("s123", PASSWORD_DEFAULT);
+  // echo"<script>alert('pass') </script>";
 
   if (empty($username)) {
   	array_push($errors, "Username is required");
@@ -146,14 +149,35 @@ if (isset($_POST['login_applicant'])) {
   {
 
   	// if both fields are filled, then only check is username and password is already created and match it
-  	$query = "SELECT * FROM applicant WHERE username='$username' AND password='$password'";
-  	$results = mysqli_query($connection, $query);
+    // echo " user " .$username . "   pass". $password;
+
+  $query_pass = "SELECT password FROM applicant WHERE username = $username";
+
+	$query_pass = "SELECT * FROM applicant ";
+  	//$results = mysqli_query($connection, $query);
+    $results = mysqli_query($connection, $query_pass);
+
+
   	if (mysqli_num_rows($results) >0) {
-  	  $_SESSION['username'] = $username;
+      while($row = $results->fetch_assoc()) {
+        // echo "id: " . $row["applicantID"]. " - Name: " . $row["fullname"]. " " . $row["username"].  $row["password"]."<br>";
+        // echo " password" . $password;
+
+        if (password_verify($row["password"], $password))
+        {
+        echo "<script>alert('login success!')</script>";
+        }
+
+    }
+
+
+  // 	  $_SESSION['username'] = $username;
+  // echo "<script>alert('password valid')</script>";
+
       echo"<script>window.open('profileApplicant.php','_self')</script>";
   	}else {
       echo"<script>alert('Wrong username/password combination')</script>";
-      echo"<script>window.open('login.php','_self')</script>";
+      // echo"<script>window.open('login.php','_self')</script>";
 
   	}
   }

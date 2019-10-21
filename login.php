@@ -123,16 +123,14 @@ include("connectDB.php");
 
                           <div style="margin-bottom:0px" class="col-md-12">
                             <div  style="color: rgba(255, 255, 255,0.5);font-size:20px; font-weight:bold " class="col-md-4">
-                              User type :
+                            
                             </div>
-                            <div style="color:rgba(255, 255, 255,0.5) ;"class="col-md-2"> Applicant </div>
-                              <div class="col-md-2">
-                                <input name='optradio' type="radio" class="col-md-6 radio form-check-input" id="checkBox1">
-                              </div>
-                              <div  style="color: rgba(255, 255, 255,0.5) ;" class="col-md-2">Housing Officer </div>
-                                <div class="col-md-2">
-                                  <input name='optradio' type="radio" class="col-md-6 radio form-check-input" id="checkBox1">
-                                </div>
+                            <select  name="price" class="btn-dropdown-location" data-toggle="dropdown">
+                              <option value="" disabled selected>User type</option>
+                              <option value="type1">Housing Officer</option>
+                              <option value="type2">Applicant</option>
+                            </select>
+
                           </div>
                           <div class="">
 
