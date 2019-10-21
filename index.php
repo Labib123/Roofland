@@ -67,19 +67,19 @@
                     <div class="dropdown" id="location">
                       <select  style="border-color:black;" name="location" class="btn-dropdown-location" data-toggle="dropdown">
                         <option value="" disabled selected>Location</option>
-                        <option value="l1">Selangor</option>
-                        <option value="l2">Penang</option>
-                        <option value="l3">Johor</option>
-                        <option value="l4">Sabah</option>
-                        <option value="l5">Sarawak</option>
-                        <option value="l6">Perak</option>
-                        <option value="l7">Kedah</option>
-                        <option value="l8">Kelantan</option>
-                        <option value="l9">Pahang</option>
-                        <option value="l10">Terengganu</option>
-                        <option value="l11">Malacca</option>
-                        <option value="l12">Negeri Sembilan</option>
-                        <option value="l13">Kuala Lumpur</option>
+                        <option value="Selangor">Selangor</option>
+                        <option value="Penang">Penang</option>
+                        <option value="Johor">Johor</option>
+                        <option value="Sabah">Sabah</option>
+                        <option value="Sarawak">Sarawak</option>
+                        <option value="Perak">Perak</option>
+                        <option value="Kedah">Kedah</option>
+                        <option value="Kelantan">Kelantan</option>
+                        <option value="Pahang">Pahang</option>
+                        <option value="Terengganu">Terengganu</option>
+                        <option value="Malacca">Malacca</option>
+                        <option value="Negeri Sembilan">Negeri Sembilan</option>
+                        <option value="Kuala Lumpur">Kuala Lumpur</option>
                       </select>
                     </div>
                   </div>

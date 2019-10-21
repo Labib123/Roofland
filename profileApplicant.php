@@ -1,6 +1,6 @@
 <?php
-  session_start();
   include("connectDB.php");
+  session_start();
   $username = $_SESSION['username'];
   $query = "SELECT fullname, username, email, monthlyIncome FROM applicant WHERE username = '$username'";
   $result = mysqli_query($connection, $query);

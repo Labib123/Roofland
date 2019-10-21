@@ -72,7 +72,7 @@ include("connectDB.php");
                       <div class="tab-content">
                         <div id="login">
                           <h1>Welcome Back!</h1><br>
-                          <form method="post" action = "connectDB.php">
+                          <form method="post" action = "login.php">
                             <div class="field-wrap">
                             <input placeholder="Username" style="color:white;" type="text" required name="username" autocomplete="off"/>
                           </div>
@@ -82,14 +82,14 @@ include("connectDB.php");
                           </div>
                           <p class="forgot"><a href="#">Forgot Password?</a></p>
                           <!-- <a href="profileHousingOfficer.php"> -->
-                          <button class="button button-block" type="submit" name="login_applicant" />Log In</button>
+                          <button class="button button-block" type="submit" name="login_applicant">Log In</button>
                           <!-- </a> -->
                           </form>
                         </div>
 <!-- ////////////////////////////////////////Signup////////////////////////////////////// -->
                         <div id="signup">
                           <h1>Sign Up for Free</h1><br>
-                            <form method="post" action = "connectDB.php">
+                            <form method="post" action = "login.php">
                               <div class="top-row">
                                 <div class="field-wrap">
                                   <input style="color:white;"placeholder="Full Name" type="text" name="fullname" required autocomplete="off" />
@@ -111,11 +111,11 @@ include("connectDB.php");
                               <!-- <form class="" action="index.php" method="post"> -->
                               <select  name="price" class="btn-dropdown-location" data-toggle="dropdown">
                                 <option value="" disabled selected>User type</option>
-                                <option value="type1">Housing Officer</option>
-                                <option value="type2">Applicant</option>
+                                <option value="HousingOfficer">Housing Officer</option>
+                                <option value="Applicant">Applicant</option>
                               </select>
                               <div class="">
-                                <button type="submit" id="submit" class=" button button-block" name="applicant_reg"/>Get Started</button>
+                                <button type="submit" class=" button button-block" name="applicant_reg">Get Started</button>
                               </div>
                             </div>
                           </form>
@@ -211,40 +211,6 @@ function alert_signup() {
 
 
 
-
-  // javascript for radio button gender type
-
-// ////////////////////////////////////////////////////////////////
-
-  $('.form').find('input, textarea').on('keyup blur focus', function (e) {
-
-  var $this = $(this),
-      label = $this.prev('label');
-
-    if (e.type === 'keyup') {
-      if ($this.val() === '') {
-          label.removeClass('active highlight');
-        } else {
-          label.addClass('active highlight');
-        }
-    } else if (e.type === 'blur') {
-      if( $this.val() === '' ) {
-        label.removeClass('active highlight');
-      } else {
-        label.removeClass('highlight');
-      }
-    } else if (e.type === 'focus') {
-
-      if( $this.val() === '' ) {
-        label.removeClass('highlight');
-      }
-      else if( $this.val() !== '' ) {
-        label.addClass('highlight');
-      }
-    }
-
-});
-
 $('.tab a').on('click', function (e) {
 
   e.preventDefault();
@@ -260,13 +226,6 @@ $('.tab a').on('click', function (e) {
 
 });
 
-$(function () {
-  $("#datepicker ,#datepicker1 , #datepicker2 , #datepicker3").datepicker({
-        autoclose: true,
-        todayHighlight: true
-
-  }).datepicker('update', new Date());
-});
 
 var options = {
   types: ['(cities)'],

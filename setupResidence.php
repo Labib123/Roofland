@@ -86,19 +86,19 @@
                           <div class="dropdown">
                             <select required name="location" id="location" class="btn-dropdown-location" data-toggle="dropdown">
                               <option value="" disabled selected>Location</option>
-                              <option value="l1">Selangor</option>
-                              <option value="l2">Penang</option>
-                              <option value="l3">Johor</option>
-                              <option value="l4">Sabah</option>
-                              <option value="l5">Sarawak</option>
-                              <option value="l6">Perak</option>
-                              <option value="l7">Kedah</option>
-                              <option value="l8">Kelantan</option>
-                              <option value="l9">Pahang</option>
-                              <option value="l10">Terengganu</option>
-                              <option value="l11">Malacca</option>
-                              <option value="l12">Negeri Sembilan</option>
-                              <option value="l13">Kuala Lumpur</option>
+                              <option value="Selangor">Selangor</option>
+                              <option value="Penang">Penang</option>
+                              <option value="Johor">Johor</option>
+                              <option value="Sabah">Sabah</option>
+                              <option value="Sarawak">Sarawak</option>
+                              <option value="Perak">Perak</option>
+                              <option value="Kedah">Kedah</option>
+                              <option value="Kelantan">Kelantan</option>
+                              <option value="Pahang">Pahang</option>
+                              <option value="Terengganu">Terengganu</option>
+                              <option value="Malacca">Malacca</option>
+                              <option value="Negeri Sembilan">Negeri Sembilan</option>
+                              <option value="Kuala Lumpur">Kuala Lumpur</option>
                             </select>
                           </div>
                         </div>
@@ -107,7 +107,7 @@
                     <div class="form-row">
                       <div class="col">
                         <div class="field-wrap-setup"> <!-- Number of Units -->
-                          <input type="number" required id="numofUnits" name="numofUnits"
+                          <input type="number" required id="numofUnits" name="numOfUnit"
                                  spellcheck="false" placeholder="Number of Units" style="color:white;">
                         </div>
                       </div>
@@ -121,7 +121,7 @@
                     <div class="form-row">
                       <div class="col">
                         <div class="field-wrap-setup"> <!-- Size per Unit -->
-                          <input type="number" required id="sizeperUnit" name="sizeperUnit"
+                          <input type="number" required id="sizeperUnit" name="sizePerUnit"
                                   spellcheck="false" placeholder="Size per Unit (sqr ft)" style="color:white;">
                         </div>
                       </div>
@@ -133,12 +133,10 @@
                           <p style="color:white;">Press CTRL to select multiple options at once</p>
                           <select id="mySelect" name="mySelect" class="btn-dropdown-location" style="font-size:23px">
                             <option value="" disabled selected>Select Facilities</option>
-                            <option value="pool">Swimming Pool</option>
-                            <option value="gym">Gym</option>
-                            <option value="cafeteria">Cafeteria</option>
-                            <option value="squash_court">Squash Court</option>
-                            <option value="bbq">BBQ pit</option>
-                            <option value="familyMart">Family Mart</option>
+                            <option value="Swimming Pool">Swimming Pool</option>
+                            <option value="Gym">Gym</option>
+                            <option value="Cafeteria">Cafeteria</option>
+                            <option value="BBQ">BBQ</option>
                           </select>
                         </div>
                       </div>
@@ -146,7 +144,7 @@
 
                     <div class="form-row">
                       <div class="col">
-                        <input style="color:white;" type="file" name="pic" accept="image/*">
+                        <input style="color:white;" type="file" name="picture" accept="image/*">
                       </div>
                     </div>
                     <br>
