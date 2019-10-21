@@ -4,7 +4,6 @@ include("connectDB.php");
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
     <title>RoofLand</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -52,7 +51,7 @@ include("connectDB.php");
 	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
             <li class="nav-item"><a href="agent.html" class="nav-link">Officer</a></li>
 	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-            <li class="nav-item active"><a href="login.html" class="nav-link">Login</a></li>
+            <li class="nav-item active"><a href="login.php" class="nav-link">Login</a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -62,26 +61,24 @@ include("connectDB.php");
       <div class="overlay">
         <div class="container">
           <div class="row no-gutters slider-text justify-content-center align-items-center">
-            <div class="col-lg-8 col-md-5 ftco-animate d-flex align-items-end">
+            <div class="col-lg-7 col-md-5 ftco-animate d-flex align-items-end">
               <div class="booking-form-login">
-                <div class="form">
+                <div class="form-login">
                       <ul class="tab-group">
                         <li class="tab active"><a href="#login">Log In</a></li>
                         <li class="tab"><a href="#signup">Sign Up</a></li>
                       </ul>
-<!-- ////////////////////////////////////////////login//////////////////////////////////////////////////////////////////// -->
+<!-- ////////////////////////////////////login////////////////////////////////////////////////// -->
                       <div class="tab-content">
                         <div id="login">
                           <h1>Welcome Back!</h1><br>
                           <form method="post" action = "connectDB.php">
                             <div class="field-wrap">
-                            <label>Username<span class="req">*</span></label>
-                            <input type="text" required name="username" autocomplete="off"/>
+                            <input placeholder="Username" style="color:white;" type="text" required name="username" autocomplete="off"/>
                           </div>
 
                           <div class="field-wrap">
-                            <label>Password<span class="req">*</span></label>
-                            <input type="password" required name="password" autocomplete="off"/>
+                            <input placeholder="Password" style="color:white;" type="password" required name="password" autocomplete="off"/>
                           </div>
                           <p class="forgot"><a href="#">Forgot Password?</a></p>
                           <!-- <a href="profileHousingOfficer.html"> -->
@@ -89,68 +86,48 @@ include("connectDB.php");
                           <!-- </a> -->
                           </form>
                         </div>
-<!-- //////////////////////////////////////////////////////// register////////////////////////////////////// -->
+<!-- ////////////////////////////////////////Signup////////////////////////////////////// -->
                         <div id="signup">
                           <h1>Sign Up for Free</h1><br>
                             <form method="post" action = "connectDB.php">
-                          <div class="top-row">
-                            <div class="field-wrap">
-                              <label>Full Name<span class="req">*</span></label>
-                              <input type="text" name="fullname" required autocomplete="off" />
+                              <div class="top-row">
+                                <div class="field-wrap">
+                                  <input style="color:white;"placeholder="Full Name" type="text" name="fullname" required autocomplete="off" />
+                                </div>
+                                <div class="field-wrap">
+                                  <input style="color:white;"placeholder="Username" type="text" name="username" required autocomplete="off"/>
+                                </div>
+                              </div>
+
+                              <div class="field-wrap">
+                                <input style="color:white;"placeholder="Email Address" type="email" name="email" required autocomplete="off"/>
+                              </div>
+                              <div class="field-wrap">
+                                <input style="color:white;"placeholder="Password" type="password" name="password" required autocomplete="off"/>
+                              </div>
+                              <div class="field-wrap">
+                                <input style="color:white;"placeholder="Monthly Income" type="decimal" name="monthlyIncome" required autocomplete="off"/>
+                              </div>
+                              <!-- <form class="" action="index.html" method="post"> -->
+                              <select  name="price" class="btn-dropdown-location" data-toggle="dropdown">
+                                <option value="" disabled selected>User type</option>
+                                <option value="type1">Housing Officer</option>
+                                <option value="type2">Applicant</option>
+                              </select>
+                              <div class="">
+                                <button type="submit" id="submit" class=" button button-block" name="applicant_reg"/>Get Started</button>
+                              </div>
                             </div>
-
-                            <div class="field-wrap">
-                              <label>Username<span class="req">*</span></label>
-                              <input type="text" name="username" required autocomplete="off"/>
-                            </div>
-                          </div>
-
-                          <div class="field-wrap">
-                            <label>Email Address<span class="req">*</span>
-                            </label>
-                            <input type="email" name="email" required autocomplete="off"/>
-                          </div>
-
-                          <div class="field-wrap">
-                            <label>Password<span class="req">*</span></label>
-                            <input type="password" name="password" required autocomplete="off"/>
-                          </div>
-                          <div class="field-wrap">
-                            <label>Salary<span class="req">*</span></label>
-                            <input type="decimal" name="monthlyIncome" required autocomplete="off"/>
-                          </div>
-                          <!-- <form class="" action="index.html" method="post"> -->
-
-                          <div style="margin-bottom:0px" class="col-md-12">
-                            <div  style="color: rgba(255, 255, 255,0.5);font-size:20px; font-weight:bold " class="col-md-4">
-                            
-                            </div>
-                            <select  name="price" class="btn-dropdown-location" data-toggle="dropdown">
-                              <option value="" disabled selected>User type</option>
-                              <option value="type1">Housing Officer</option>
-                              <option value="type2">Applicant</option>
-                            </select>
-
-                          </div>
-                          <div class="">
-
-                            <button type="submit" id="submit" class=" button button-block" name="applicant_reg"/>Get Started</button>
-
-                          </div>
-                          <!-- </form> -->
-                        </div>
-                      </form>
-
-
-                      </div><!-- tab-content -->
-                    </div> <!-- /form -->
+                          </form>
+                        </div><!-- tab-content -->
+                      </div> <!-- /form -->
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- /////////////////////////////////////////////////////////////////////////////////////////// -->
         <footer class="ftco-footer ftco-section">
           <div class="container">
             <div class="row mb-5">

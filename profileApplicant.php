@@ -1,3 +1,11 @@
+<?php
+  session_start();
+  include("connectDB.php");
+  $username = $_SESSION['username'];
+  $query = "SELECT fullname, username, email, monthlyIncome FROM applicant WHERE username = '$username'";
+  $result = mysqli_query($connection, $query);
+  $resultCheck = mysqli_num_rows($result);
+ ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -45,8 +53,8 @@
                 Username
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item active" href="profileApplicant.html">Profile</a>
-                <a class="dropdown-item" href="#">My Application</a>
+                <a class="dropdown-item active" href="profileApplicant.php">Profile</a>
+                <a class="dropdown-item" href="applicantApplication.php">My Application</a>
                 <a class="dropdown-item" href="#">Logout</a>
               </div>
             </li>
@@ -67,7 +75,7 @@
                     <div class="row">
                       <div class="col text-center mt-3">
                         <img alt="picture" src="https://qodebrisbane.com/wp-content/uploads/2019/07/This-is-not-a-person-2-1.jpeg" class="img-lg rounded-circle border shadow" />
-                        <h2 class="mt-3" style="color:white;">Jessica Simps</h2>
+                        <h2 class="mt-3" style="color:white;"><?php echo $resultCheck['fullname']; ?></h2>
                       </div>
                     </div>
 
@@ -80,28 +88,52 @@
                         </ul>
                         <div class="tab-content" id="myTabContent">
                           <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <table class="table table-hover table-sm table-properties">
-                              <tr v-show="user.given_name">
-                                <th>Full name</th>
-                                <td><!--{{user.given_name}}--> Jessica Simps</td>
-                              </tr>
-                              <tr v-show="user.name">
-                                <th>Username</th>
-                                <td><!--{{user.name}}--> Jess987</td>
-                              </tr>
-                              <tr v-show="user.password">
-                                <th>Password</th>
-                                <td><!--{{user.password}}--> 1234567</td>
-                              </tr>
-                              <tr v-show="user.email">
-                                <th>Email</th>
-                                <td><!--{{user.email}}--> jess@gmail.com</td>
-                              </tr>
-                              <tr><!--v-show="user.income"-->
-                                <th>Monthly Income</th>
-                                <td>RM<!--{{user.income}}-->2100</td>
-                              </tr>
-                            </table>
+                            <?php
+                            while ($row = mysqli_fetch_assoc($result)){
+                              echo '<table class="table table-hover table-sm table-properties">
+                                      <tr v-show="user.name">
+                                        <th>Full name</th>';
+                              echo      '<td>'.$row['fullname'].'</td>
+                                      </tr>
+                                      <tr v-show="user.name">
+                                        <th>Username</th>';
+                              echo      '<td>'.$row['username'].'</td>
+                                      </tr>
+                                      <tr v-show="user.name">
+                                        <th>Email</th>';
+                              echo      '<td>'.$row['email'].'</td>
+                                      </tr>
+                                      <tr v-show="user.name">
+                                        <th>Monthly Income</th>';
+                              echo      '<td>'.$row['monthlyIncome'].'</td>
+                                      </tr>
+                                    </table>';
+                            }
+
+                                  // <table class="table table-hover table-sm table-properties">
+                                  //   <tr v-show="user.given_name">
+                                  //     <th>Full name</th>
+                                  //     <td><!--{{user.given_name}}--> Jessica Simps</td>
+                                  //   </tr>
+                                  //   <tr v-show="user.name">
+                                  //     <th>Username</th>
+                                  //     <td><!--{{user.name}}--> Jess987</td>
+                                  //   </tr>
+                                  //   <tr v-show="user.password">
+                                  //     <th>Password</th>
+                                  //     <td><!--{{user.password}}--> 1234567</td>
+                                  //   </tr>
+                                  //   <tr v-show="user.email">
+                                  //     <th>Email</th>
+                                  //     <td><!--{{user.email}}--> jess@gmail.com</td>
+                                  //   </tr>
+                                  //   <tr><!--v-show="user.income"-->
+                                  //     <th>Monthly Income</th>
+                                  //     <td>RM<!--{{user.income}}-->2100</td>
+                                  //   </tr>
+                                  // </table>
+
+                            ?>
                           </div>
                         </div>
                       </div>
