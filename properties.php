@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/profilestyle.css">
   </head>
 
   <body>
@@ -33,9 +32,8 @@
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
-
         <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
             <li class="nav-item"><a href="agent.php" class="nav-link">Officer</a></li>
@@ -45,9 +43,8 @@
                 Username
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item active" href="profileHousingOfficer.php">Profile</a>
-                <a class="dropdown-item" href="residenceTable.php">My Residence</a>
-                <a class="dropdown-item active" href="viewApplications.php">My Application</a>
+                <a class="dropdown-item" href="profileApplicant.php">Profile</a>
+                <a class="dropdown-item" href="applicantApplication.php">My Application</a>
                 <a class="dropdown-item" href="#">Logout</a>
               </div>
             </li>
@@ -57,57 +54,127 @@
 	  </nav>
     <!-- END nav -->
     <section class="hero-wrap hero-wrap-2 ftco-degree-bg js-fullheight" style="background-image: url('images/giovany3.jpg');" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div><br>
+      <div class="overlay"></div>
       <div class="container">
-        <div class="row no-gutters slider-text justify-content-center align-items-center">
-          <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-end">
-            <div class="booking-form-profileApp">
-              <div class="tab-content">
-                <div id="single">
-                  <div id="user" class="container profile" style="display: none;">
-                    <div class="row">
-                      <div class="col text-center mt-3">
-                        <img alt="picture" src="https://qodebrisbane.com/wp-content/uploads/2019/07/This-is-not-a-person-2-1.jpeg" class="img-lg rounded-circle border shadow" />
-                        <h2 class="mt-3" style="color:white;">Uzumaki Naruto</h2>
-                      </div>
-                    </div>
-                    <div class="row mt-2">
-                      <div class="col">
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                          <li class="nav-item">
-                            <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">Profile</a>
-                          </li>
-                        </ul>
-                        <div class="tab-content" id="myTabContent">
-                          <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <table class="table table-hover table-sm table-properties">
-                              <tr v-show="user.given_name">
-                                <th>Full name</th>
-                                <td><!--{{user.given_name}}-->Uzumaki Naruto</td>
-                              </tr>
-                              <tr v-show="user.name">
-                                <th>Username</th>
-                                <td><!--{{user.name}}-->Fishcakes</td>
-                              </tr>
-                              <tr v-show="user.password">
-                                <th>Password</th>
-                                <td><!--{{user.password}}-->101080</td>
-                              </tr>
-                            </table>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+          	<p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Properties <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-3 bread" style="color:black;">Choose <br>Your Desired Home</h1>
           </div>
+        </div>
       </div>
     </section>
-    <!--END BG-->
 
-    <!--footer-->
+		<section class="ftco-section">
+    	<div class="container">
+        <div class="row">
+        	<div class="col-md-4">
+        		<div class="property-wrap ftco-animate">
+        			<a href="properties-single.php" class="img" style="background-image: url(images/work-1.jpg);"></a>
+        			<div class="text">
+        				<p class="price"><span class="orig-price">RM 1000<small>/month</small></span></p>
+        				<ul class="property_list">
+        					<li><span class="flaticon-bed"></span>3</li>
+        					<li><span class="flaticon-floor-plan"></span>1,878 sqft</li>
+        				</ul>
+        				<h3><a href="properties-single.php">Damansara Exclusive Condominium</a></h3>
+        				<span class="location">Selangor</span>
+        				<a href="properties-single.php" class="d-flex align-items-center justify-content-center btn-custom">
+        					<span class="ion-ios-link"></span>
+        				</a>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-md-4">
+        		<div class="property-wrap ftco-animate">
+        			<a href="properties-single.php" class="img" style="background-image: url(images/twins.jpeg);"></a>
+        			<div class="text">
+        				<p class="price"><span class="orig-price">RM 800<small>/month</small></span></p>
+        				<ul class="property_list">
+        					<li><span class="flaticon-bed"></span>1</li>
+        					<li><span class="flaticon-floor-plan"></span>1,878 sqft</li>
+        				</ul>
+        				<h3><a href="properties-single.php">Twins Condominium</a></h3>
+        				<span class="location">Selangor</span>
+        				<a href="properties-single.php" class="d-flex align-items-center justify-content-center btn-custom">
+        					<span class="ion-ios-link"></span>
+        				</a>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-md-4">
+        		<div class="property-wrap ftco-animate">
+        			<a href="properties-single.php" class="img" style="background-image: url(images/prima.jpeg);"></a>
+        			<div class="text">
+        				<p class="price"><span class="orig-price">RM850 <small>/month</small></span></p>
+        				<ul class="property_list">
+        					<li><span class="flaticon-bed"></span>2</li>
+        					<li><span class="flaticon-floor-plan"></span>1,878 sqft</li>
+        				</ul>
+        				<h3><a href="properties-single.php">Prima 16 Phase 1</a></h3>
+        				<span class="location">Selangor</span>
+        				<a href="properties-single.php" class="d-flex align-items-center justify-content-center btn-custom">
+        					<span class="ion-ios-link"></span>
+        				</a>
+        			</div>
+        		</div>
+        	</div>
+
+        	<div class="col-md-4">
+        		<div class="property-wrap ftco-animate">
+        			<a href="properties-single.php" class="img" style="background-image: url(images/cyberjaya.jpg);"></a>
+        			<div class="text">
+        				<p class="price"><span class="orig-price">RM 900<small>/month</small></span></p>
+        				<ul class="property_list">
+        					<li><span class="flaticon-bed"></span>3</li>
+        					<li><span class="flaticon-floor-plan"></span>1,878 sqft</li>
+        				</ul>
+        				<h3><a href="properties-single.php">The ARC @ Damansara</a></h3>
+        				<span class="location">Selangor</span>
+        				<a href="properties-single.php" class="d-flex align-items-center justify-content-center btn-custom">
+        					<span class="ion-ios-link"></span>
+        				</a>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-md-4">
+        		<div class="property-wrap ftco-animate">
+        			<a href="properties-single.php" class="img" style="background-image: url(images/brickfields.jpg);"></a>
+        			<div class="text">
+        				<p class="price"><span class="orig-price">RM 950<small>/month</small></span></p>
+        				<ul class="property_list">
+        					<li><span class="flaticon-bed"></span>3</li>
+        					<li><span class="flaticon-floor-plan"></span>1,878 sqft</li>
+        				</ul>
+        				<h3><a href="properties-single.php">Paramount View</a></h3>
+        				<span class="location">Selangor</span>
+        				<a href="properties-single.php" class="d-flex align-items-center justify-content-center btn-custom">
+        					<span class="ion-ios-link"></span>
+        				</a>
+        			</div>
+        		</div>
+        	</div>
+        	<div class="col-md-4">
+        		<div class="property-wrap ftco-animate">
+        			<a href="properties-single.php" class="img" style="background-image: url(images/scholar.jpg);"></a>
+        			<div class="text">
+        				<p class="price"><span class="orig-price">RM 1000<small>/month</small></span></p>
+        				<ul class="property_list">
+        					<li><span class="flaticon-bed"></span>1</li>
+        					<li><span class="flaticon-floor-plan"></span>1,878 sqft</li>
+        				</ul>
+        				<h3><a href="properties-single.php">Scholar's Inn</a></h3>
+        				<span class="location">Selangor</span>
+        				<a href="properties-single.php" class="d-flex align-items-center justify-content-center btn-custom">
+        					<span class="ion-ios-link"></span>
+        				</a>
+        			</div>
+        		</div>
+        	</div>
+        </div>
+    	</div>
+    </section>
+    <!-- Footer -->
     <footer class="ftco-footer ftco-section">
       <div class="container">
         <div class="row mb-5">
@@ -163,6 +230,7 @@
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
+
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
@@ -180,9 +248,6 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-  <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
-  <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
-  <script  src="js/profilescript.js"></script>
+
   </body>
 </html>

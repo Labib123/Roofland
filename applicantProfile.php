@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <title>RoofLand</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,45 +28,19 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-
-    <style>
-
-        .resID{
-        width: 14.2%;
-        }
-        .resName{
-        width: 14.2%;
-        }
-        .resLocation{
-        width: 14.2%;
-        }
-        .resRent{
-        width: 14.2%;
-        }
-        .resFacility{
-        width: 14.2%;
-        }
-        .resUnit{
-        width: 14.2%;
-        }
-        .resSize{
-        width: 14.2%;
-        }
-
-    </style>
-
+    <link rel="stylesheet" type="text/css" href="css/applicantProfile.css">
   </head>
 
   <body>
-	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.php"><img src="images/fav1.png" alt="RoofLand" width="115px"></img></a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.php"><img src="images/fav1.png" alt="RoofLand" width="115px"></img></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
             <li class="nav-item"><a href="agent.php" class="nav-link">Officer</a></li>
@@ -75,9 +50,9 @@
                 Username
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="profileHousingOfficer.php">Profile</a>
-                <a class="dropdown-item active" href="residenceTable.php">My Residence</a>
-                <a class="dropdown-item active" href="viewApplications.php">My Application</a>
+                <a class="dropdown-item " href="profileHousingOfficer.php">Profile</a>
+                <a class="dropdown-item" href="residenceTable.php">My Residence</a>
+                <a class="dropdown-item" href="#">My Application</a>
                 <a class="dropdown-item" href="#">Logout</a>
               </div>
             </li>
@@ -91,67 +66,105 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate pb-5 text-center">
-          	<p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>My Residence<i class="ion-ios-arrow-forward"></i></span></p>
-            <h1 class="mb-3 bread" style="color:black;">My Residence</h1>
+          	<p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Applications <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-3 bread" style="color:black;">Applicant Profile</h1>
           </div>
         </div>
       </div>
     </section>
-    <!-- END backgrounf ans title -->
     <br>
-		<section class="ftco-section ftco-agent">
-    	<div class="container">
-        <div class="applicationTable">
-          <?php
-          include("connectDB.php");
-          $query = "SELECT * FROM residence";
-          echo '<table class="table"> <!--table contents connected using js-->
-            <thead>
-              <tr>
-                <th class="resID">ID</th>
-                <th class="resName">Residence Name</th>
-                <th class="resLocation">Location</th>
-                <th class="resRent">Monthly Rent (RM)</th>
-                <th class="resFacility">Facilities</th>
-                <th class="resUnit">Number of Units</th>
-                <th class="resSize">Size per unit (sqr ft)</th>
-                <th><a data-target="#myModal" href="setupResidence.php" >
-                  <i class="fa fa-plus" aria-hidden="true"></i>
-                </a></th>
-              </tr>
-            </thead>
-          </table>';
-
-          $results = mysqli_query($connection, $query);
-          if (mysqli_num_rows($results)>0) {
-            while ($row = $results->fetch_assoc()) {
-                $field1name = $row["residenceID"];
-                $field2name = $row["residenceName"];
-                $field3name = $row["location"];
-                $field4name = $row["price"];
-                $field5name = $row["facilities"];
-                $field6name = $row["numOfUnit"];
-                $field7name = $row["sizePerUnit"];
-
-                echo '<table class="table">
-                          <tr>
-                              <td class="resID">'.$field1name.'</td>
-                              <td class="resName">'.$field2name.'</td>
-                              <td class="resLocation">'.$field3name.'</td>
-                              <td class="resRent">'.$field4name.'</td>
-                              <td class="resFacility">'.$field5name.'</td>
-                              <td class="resUnit">'.$field6name.'</td>
-                              <td class="resSize">'.$field7name.'</td>
-                          </tr>
-                      </table>
-                      <br>';
-              }
-            }
-          ?>
-        </div>
-      </div>
-    </section>
-    <!-- Footer -->
+    <!-- START Applicant Profile -->
+    <div style="margin:100px;">
+      <div class="container">
+        <div class="row profile">
+          <div class="col-md-3">
+            <div class="profile-sidebar">
+              <!-- SIDEBAR USERPIC -->
+              <div class="profile-userpic">
+                <img class=''src="http://bootdey.com/img/Content/avatar/avatar6.png" class="img-responsive" alt="">
+              </div>
+              <!-- END SIDEBAR user name
+              USERPIC -->
+              <!-- SIDEBAR USER TITLE -->
+              <div class="profile-usertitle">
+                <div class="profile-usertitle-name">
+                  Labib Mansour
+                </div>
+              </div>
+              <!-- END SIDEBAR USER TITLE -->
+              <!-- SIDEBAR BUTTONS -->
+              <div class="profile-userbuttons">
+                <i id="rejected" style="display: none;" class="fa fa-ban fa-5x" aria-hidden="true"></i>
+                <i id="accepted" style="display: none;" class="fa fa-check-circle fa-5x center" aria-hidden="true"></i>
+                <button id='accept'onclick='accepted()' type="button"
+                        class="btn btn-success btn-sm">Accept</button>
+                <button id='reject' onclick='alert("Applicant is successfully Rejected ");
+                        document.getElementById("rejected").style.display="block"; this.style.display="none";
+                        document.getElementById("accept").style.display="none"' type="button"
+                        class="btn btn-danger btn-sm">Reject</button>
+              </div>
+              <!-- END SIDEBAR BUTTONS -->
+            </div>
+          </div>
+          <div id='durationArea' class="row">
+            <div id="section1" class="col-md-2">
+              <div class="profile-user-info">
+                <!-- Row 1: Username -->
+                <div class="profile-info-row">
+                  <div class="profile-info-name">Username</div>
+                  <div class="profile-info-value">
+                    <span>Labib123</span>
+                  </div>
+                </div>
+                <!-- Row 2: Full Name -->
+                <div class="profile-info-row">
+                  <div class="profile-info-name">Full Name</div>
+                  <div class="profile-info-value">
+                    <span>Labib Mansour</span>
+                  </div>
+                </div>
+                <!-- Row 3: Monthly Salary -->
+                <div class="profile-info-row">
+                  <div class="profile-info-name">Monthly Salary (RM)</div>
+                  <div class="profile-info-value">
+                    <span>2000</span>
+                  </div>
+                </div>
+                <!-- Row 4: Residence ID -->
+                <div class="profile-info-row">
+                  <div class="profile-info-name">ResidenceID</div>
+                  <div class="profile-info-value">
+                    <span>R123</span>
+                  </div>
+                </div>
+                <!-- Row 4: Month -->
+                <div class="profile-info-row">
+                  <div class="profile-info-name">Month</div>
+                  <div class="profile-info-value">
+                    <span>08</span>
+                  </div>
+                </div>
+                <!-- Row 5: Year -->
+                <div class="profile-info-row">
+                  <div class="profile-info-name">Year</div>
+                  <div class="profile-info-value">
+                    <span>2019</span>
+                  </div>
+                </div>
+                <!-- Row 6: Monthly Rent -->
+                <div class="profile-info-row">
+                  <div class="profile-info-name">Monthly Rent</div>
+                  <div class="profile-info-value">
+                    <span>RM800</span>
+                  </div>
+                </div>
+              </div> <!--END profilr-user-info -->
+            </div> <!-- END section1 -->
+          </div> <!-- END durationArea -->
+        </div> <!-- End row profile -->
+      </div> <!-- END container -->
+    </div>
+    <!-- END Profile -->
     <footer class="ftco-footer ftco-section">
       <div class="container">
         <div class="row mb-5">
@@ -224,27 +237,42 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script type="js/profilescript.js"></script>
+
+  <script src="js/viewApplications.js"></script>
+  <script type="text/javascript">
+
+
+
+ function accepted() {
+  alert("Applicant is successfully accepted ");
+  document.getElementById("accept").style.display="none" ;
+  document.getElementById("accepted").style.display="block";
+  document.getElementById("reject").style.display="none" ;
+  var section1 = document.getElementById('section1') ;
+  section1.style.display='none' ;
+  document.getElementById('section2').style.display='none' ;
+  var duration =  document.createElement('DIV');
+  duration.className = 'duration' ;
+  duration.innerHTML = `
+
+  <div class="dropdown">
+  <div> Duration: </div>
+  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+    Please enter the Duration
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="#">12 Month </a>
+    <a class="dropdown-item" href="#">18 Month</a>
+  </div>
+</div>
+
+  ` ;
+  var area = document.getElementById('durationArea') ;
+  area.appendChild(duration);
+
+}
+  </script>
 
   </body>
-  <!-- <script type="text/javascript">
-  var table = document.getElementById('table') ;
-  // populate table's rows in JavaScript array
-  var array = [
-             [1,'R123','Prima 16 Condominium','Johor',2,850,1000,'Gym <br> Swimming pool','<i class="fas fa-check"></i>'],
-             [2,'R908','Twins','Selangor',3,1500,1200,'Swimming Pool <br> Cafeteria','<i class="fas fa-check"></i>'] ,
-             [3,'R675','The ARC','Kuala Lumpur',2,1500,2000,'Cafeteria','<i class="far fa-times-circle"></i>']] ;
-   for(var i = 0; i < array.length; i++)
-            {
-                // create a new row
-                var newRow = table.insertRow(table.length);
-                for(var j = 0; j < array[i].length; j++)
-                {
-                    // create a new cell
-                    var cell = newRow.insertCell(j);
-
-                    // add value to the cell
-                    cell.innerHTML = array[i][j];
-                }
-            }
-  </script> -->
 </html>

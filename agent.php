@@ -23,7 +23,6 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/profilestyle.css">
   </head>
 
   <body>
@@ -34,80 +33,133 @@
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
-        <div class="collapse navbar-collapse" id="ftco-nav">
+	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="agent.php" class="nav-link">Officer</a></li>
+            <li class="nav-item active"><a href="agent.php" class="nav-link">Officer</a></li>
 	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
-                Username
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item active" href="profileHousingOfficer.php">Profile</a>
-                <a class="dropdown-item" href="residenceTable.php">My Residence</a>
-                <a class="dropdown-item active" href="viewApplications.php">My Application</a>
-                <a class="dropdown-item" href="#">Logout</a>
-              </div>
-            </li>
+            <li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
     <!-- END nav -->
     <section class="hero-wrap hero-wrap-2 ftco-degree-bg js-fullheight" style="background-image: url('images/giovany3.jpg');" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div><br>
+      <div class="overlay"></div>
       <div class="container">
-        <div class="row no-gutters slider-text justify-content-center align-items-center">
-          <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-end">
-            <div class="booking-form-profileApp">
-              <div class="tab-content">
-                <div id="single">
-                  <div id="user" class="container profile" style="display: none;">
-                    <div class="row">
-                      <div class="col text-center mt-3">
-                        <img alt="picture" src="https://qodebrisbane.com/wp-content/uploads/2019/07/This-is-not-a-person-2-1.jpeg" class="img-lg rounded-circle border shadow" />
-                        <h2 class="mt-3" style="color:white;">Uzumaki Naruto</h2>
-                      </div>
-                    </div>
-                    <div class="row mt-2">
-                      <div class="col">
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                          <li class="nav-item">
-                            <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">Profile</a>
-                          </li>
-                        </ul>
-                        <div class="tab-content" id="myTabContent">
-                          <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <table class="table table-hover table-sm table-properties">
-                              <tr v-show="user.given_name">
-                                <th>Full name</th>
-                                <td><!--{{user.given_name}}-->Uzumaki Naruto</td>
-                              </tr>
-                              <tr v-show="user.name">
-                                <th>Username</th>
-                                <td><!--{{user.name}}-->Fishcakes</td>
-                              </tr>
-                              <tr v-show="user.password">
-                                <th>Password</th>
-                                <td><!--{{user.password}}-->101080</td>
-                              </tr>
-                            </table>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+          	<p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Officer <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-3 bread" style="color:black;">Officer</h1>
           </div>
+        </div>
       </div>
     </section>
-    <!--END BG-->
-
-    <!--footer-->
+    <!-- END Background and Title -->
+		<section class="ftco-section ftco-agent">
+    	<div class="container">
+        <div class="row">
+          <!-- Agent 1 -->
+        	<div class="col-md-3">
+        		<div class="agent">
+    					<div class="img">
+		    				<img src="images/team-1.jpg" class="img-fluid" alt="Colorlib Template">
+	    				</div>
+	    				<div class="desc">
+	    					<h3><a href="properties.php">James Stallon</a></h3>
+								<p class="h-info"><span class="location">Listing</span> <span class="details">&mdash; 10 Properties</span></p>
+	    				</div>
+    				</div>
+        	</div>
+          <!-- Agent 2 -->
+        	<div class="col-md-3">
+        		<div class="agent">
+    					<div class="img">
+		    				<img src="images/team-2.jpg" class="img-fluid" alt="Colorlib Template">
+	    				</div>
+	    				<div class="desc">
+	    					<h3><a href="properties.php">Eric Hund</a></h3>
+								<p class="h-info"><span class="location">Listing</span> <span class="details">&mdash; 10 Properties</span></p>
+	    				</div>
+    				</div>
+        	</div>
+          <!-- Agent 3 -->
+        	<div class="col-md-3">
+        		<div class="agent">
+    					<div class="img">
+		    				<img src="images/team-3.jpg" class="img-fluid" alt="Colorlib Template">
+	    				</div>
+	    				<div class="desc">
+	    					<h3><a href="properties.php">Catalina Pereira</a></h3>
+								<p class="h-info"><span class="location">Listing</span> <span class="details">&mdash; 10 Properties</span></p>
+	    				</div>
+    				</div>
+        	</div>
+          <!-- Agent 4 -->
+        	<div class="col-md-3">
+        		<div class="agent">
+    					<div class="img">
+		    				<img src="images/team-4.jpg" class="img-fluid" alt="Colorlib Template">
+	    				</div>
+	    				<div class="desc">
+	    					<h3><a href="properties.php">Aminah Abdullah</a></h3>
+								<p class="h-info"><span class="position">Listing</span> <span class="details">&mdash; 10 Properties</span></p>
+	    				</div>
+    				</div>
+        	</div>
+          <!-- Agent 5 -->
+        	<div class="col-md-3">
+        		<div class="agent">
+    					<div class="img">
+		    				<img src="images/team-5.jpg" class="img-fluid" alt="Colorlib Template">
+	    				</div>
+	    				<div class="desc">
+	    					<h3><a href="properties.php">Richard Bouhier</a></h3>
+								<p class="h-info"><span class="location">Listing</span> <span class="details">&mdash; 10 Properties</span></p>
+	    				</div>
+    				</div>
+        	</div>
+          <!-- Agent 6 -->
+        	<div class="col-md-3">
+        		<div class="agent">
+    					<div class="img">
+		    				<img src="images/team-6.jpg" class="img-fluid" alt="Colorlib Template">
+	    				</div>
+	    				<div class="desc">
+	    					<h3><a href="properties.php">Amandeep Singh</a></h3>
+								<p class="h-info"><span class="location">Listing</span> <span class="details">&mdash; 10 Properties</span></p>
+	    				</div>
+    				</div>
+        	</div>
+          <!-- Agent 7 -->
+        	<div class="col-md-3">
+        		<div class="agent">
+    					<div class="img">
+		    				<img src="images/team-7.jpg" class="img-fluid" alt="Colorlib Template">
+	    				</div>
+	    				<div class="desc">
+	    					<h3><a href="properties.php">Celest Chan</a></h3>
+								<p class="h-info"><span class="location">Listing</span> <span class="details">&mdash; 10 Properties</span></p>
+	    				</div>
+    				</div>
+        	</div>
+          <!-- Agent 8 -->
+        	<div class="col-md-3">
+        		<div class="agent">
+    					<div class="img">
+		    				<img src="images/team-8.jpg" class="img-fluid" alt="Colorlib Template">
+	    				</div>
+	    				<div class="desc">
+	    					<h3><a href="properties.php">Rahul Rajvinder</a></h3>
+								<p class="h-info"><span class="position">Listing</span> <span class="details">&mdash; 10 Properties</span></p>
+	    				</div>
+    				</div>
+        	</div>
+        </div>
+    	</div>
+    </section>
+    <!-- END of Agents list -->
     <footer class="ftco-footer ftco-section">
       <div class="container">
         <div class="row mb-5">
@@ -180,9 +232,6 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-  <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
-  <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
-  <script  src="js/profilescript.js"></script>
+
   </body>
 </html>

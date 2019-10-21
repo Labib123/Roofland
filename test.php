@@ -51,11 +51,11 @@
 	      </button>
         <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="agent.html" class="nav-link">Officer</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-            <li class="nav-item active"><a href="login.html" class="nav-link">Login</a></li>
+            <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="agent.php" class="nav-link">Officer</a></li>
+	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+            <li class="nav-item active"><a href="login.php" class="nav-link">Login</a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -134,13 +134,13 @@
       </div>
     </div>
 
-  <footer class="ftco-footer ftco-section">
+    <footer class="ftco-footer ftco-section">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Uptown</h2>
-              <p>Far far away, behind the word mountains, far from the countries.</p>
+              <h2 class="ftco-heading-2">RoofLand</h2>
+              <p>Convenience within the comforts of home</p>
               <ul class="ftco-footer-social list-unstyled mt-5">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -152,10 +152,8 @@
             <div class="ftco-footer-widget mb-4 ml-md-4">
               <h2 class="ftco-heading-2">Community</h2>
               <ul class="list-unstyled">
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Search Properties</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>For Agents</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Reviews</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>FAQs</a></li>
+                <li><a href="index.html"><span class="icon-long-arrow-right mr-2"></span>Search Properties</a></li> <!-- Link to the home page to search -->
+                <li><a href="faq.php"><span class="icon-long-arrow-right mr-2"></span>FAQs</a></li> <!-- Link to FAQ page -->
               </ul>
             </div>
           </div>
@@ -163,39 +161,27 @@
             <div class="ftco-footer-widget mb-4 ml-md-4">
               <h2 class="ftco-heading-2">About Us</h2>
               <ul class="list-unstyled">
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Our Story</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Meet the team</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Careers</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Company</h2>
-              <ul class="list-unstyled">
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>About Us</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Press</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Contact</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Careers</a></li>
+                <li><a href="about.html"><span class="icon-long-arrow-right mr-2"></span>Our Story</a></li> <!-- Linked to about page -->
+                <li><a href="agent.html"><span class="icon-long-arrow-right mr-2"></span>Meet the team</a></li> <!-- Linked to agent page -->
               </ul>
             </div>
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope pr-4"></span><span class="text">info@yourdomain.com</span></a></li>
-	              </ul>
-	            </div>
+              <h2 class="ftco-heading-2">Have a Questions?</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li><span class="icon icon-map-marker"></span><span class="text">No 15 Jalan Sri Semantan 1, <br>Bukit Damansara,<br> 50490, Kuala Lumpur</span></li>
+                  <li><a href="#"><span class="icon icon-phone"></span><span class="text">+603 2095 8791</span></a></li>
+                  <li><a href="#"><span class="icon icon-envelope pr-4"></span><span class="text">info@helplive.edu.my</span></a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script></p>
+            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script></p> <!-- Automated year-->
           </div>
         </div>
       </div>

@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -32,54 +31,63 @@
   <body>
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html"><img src="images/fav1.png" alt="RoofLand" width="115px"></img></a>
+	      <a class="navbar-brand" href="index.php"><img src="images/fav1.png" alt="RoofLand" width="115px"></img></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
+	        <span class="oi oi-menu"></span>Menu
 	      </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
             <li class="nav-item"><a href="agent.php" class="nav-link">Officer</a></li>
 	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-            <li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
+                Username
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="profileHousingOfficer.php">Profile</a>
+                <a class="dropdown-item" href="residenceTable.php">My Residence</a>
+                <a class="dropdown-item active" href="viewApplications.php">My Application</a>
+                <a class="dropdown-item" href="#">Logout</a>
+              </div>
+            </li>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
     <!-- END nav -->
+
     <section class="hero-wrap hero-wrap-2 ftco-degree-bg js-fullheight" style="background-image: url('images/giovany3.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate pb-5 text-center">
-          	<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>My Residence<i class="ion-ios-arrow-forward"></i></span></p>
-            <h1 class="mb-3 bread" style="color:black;">My Residence</h1>
+          	<p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span> My Application <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-3 bread" style="color:black;">My Application</h1>
           </div>
         </div>
       </div>
     </section>
-    <!-- END backgrounf ans title -->
     <br>
 		<section class="ftco-section ftco-agent">
     	<div class="container">
         <div class="applicationTable">
-          <table id='table' class="table"style="width:100%;"> <!--table contents connected using js-->
+          <table id='table' class="table"style="width:100%;"> <!--table content displayed using js-->
             <thead>
               <tr>
                 <th>#</th>
-                <th>ID</th>
+                <th>ResidenceID</th>
                 <th>Residence Name</th>
-                <th>Location</th>
                 <th>Number of Units</th>
-                <th>Monthly Rent (RM)</th>
-                <th>Size per unit (sqr ft)</th>
-                <th>Facilities</th>
-                <th>Availability</th>
-                <th><a data-target="#myModal" href="setupResidence.html" >
-                  <i class="fa fa-plus" aria-hidden="true"></i>
-                </a></th>
+                <th>Monthly Rent</th>
+                <th>Applicant Name</th>
+                <th>Monthly Income</th>
+                <th>Month</th>
+                <th>Year</th>
+                <th>Status</th>
+                <th></th>
               </tr>
             </thead>
           </table>
@@ -105,8 +113,8 @@
              <div class="ftco-footer-widget mb-4 ml-md-4">
                <h2 class="ftco-heading-2">Community</h2>
                <ul class="list-unstyled">
-                 <li><a href="index.html"><span class="icon-long-arrow-right mr-2"></span>Search Properties</a></li> <!-- Link to the home page to search -->
-                 <li><a href="faq.html"><span class="icon-long-arrow-right mr-2"></span>FAQs</a></li> <!-- Link to FAQ page -->
+                 <li><a href="index.php"><span class="icon-long-arrow-right mr-2"></span>Search Properties</a></li> <!-- Link to the home page to search -->
+                 <li><a href="faq.php"><span class="icon-long-arrow-right mr-2"></span>FAQs</a></li> <!-- Link to FAQ page -->
                </ul>
              </div>
            </div>
@@ -114,8 +122,8 @@
              <div class="ftco-footer-widget mb-4 ml-md-4">
                <h2 class="ftco-heading-2">About Us</h2>
                <ul class="list-unstyled">
-                 <li><a href="about.html"><span class="icon-long-arrow-right mr-2"></span>Our Story</a></li> <!-- Linked to about page -->
-                 <li><a href="agent.html"><span class="icon-long-arrow-right mr-2"></span>Meet the team</a></li> <!-- Linked to agent page -->
+                 <li><a href="about.php"><span class="icon-long-arrow-right mr-2"></span>Our Story</a></li> <!-- Linked to about page -->
+                 <li><a href="agent.php"><span class="icon-long-arrow-right mr-2"></span>Meet the team</a></li> <!-- Linked to agent page -->
                </ul>
              </div>
            </div>
@@ -139,7 +147,6 @@
          </div>
        </div>
      </footer>
-
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
@@ -160,27 +167,8 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/viewApplications.js"></script>
+
 
   </body>
-  <script type="text/javascript">
-  var table = document.getElementById('table') ;
-  // populate table's rows in JavaScript array
-  var array = [
-             [1,'R123','Prima 16 Condominium','Johor',2,850,1000,'Gym <br> Swimming pool','<i class="fas fa-check"></i>'],
-             [2,'R908','Twins','Selangor',3,1500,1200,'Swimming Pool <br> Cafeteria','<i class="fas fa-check"></i>'] ,
-             [3,'R675','The ARC','Kuala Lumpur',2,1500,2000,'Cafeteria','<i class="far fa-times-circle"></i>']] ;
-   for(var i = 0; i < array.length; i++)
-            {
-                // create a new row
-                var newRow = table.insertRow(table.length);
-                for(var j = 0; j < array[i].length; j++)
-                {
-                    // create a new cell
-                    var cell = newRow.insertCell(j);
-
-                    // add value to the cell
-                    cell.innerHTML = array[i][j];
-                }
-            }
-  </script>
 </html>
