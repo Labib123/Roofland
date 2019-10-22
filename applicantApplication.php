@@ -1,3 +1,7 @@
+<?php
+session_start();
+include("connectDB.php");
+ ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -36,16 +40,21 @@
 	        <span class="oi oi-menu"></span>Menu
 	      </button>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
+        <div class="collapse navbar-collapse" id="ftco-nav">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
             <li class="nav-item"><a href="agent.php" class="nav-link">Officer</a></li>
-	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-            <li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>
-	        </ul>
-	      </div>
-	    </div>
+            <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
+                <?php echo $_SESSION['username']?>
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item active" href="profileApplicant.php">Profile</a>
+                <a class="dropdown-item" href="applicantApplication.php">My Application</a>
+                <a class="dropdown-item" href="logout.php" <?=$_SESSION['username'];?>>Logout</a>
+              </div>
 	  </nav>
     <!-- END nav -->
     <section class="hero-wrap hero-wrap-2 ftco-degree-bg js-fullheight" style="background-image: url('images/giovany3.jpg');" data-stellar-background-ratio="0.5">
