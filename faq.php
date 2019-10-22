@@ -23,91 +23,128 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/profilestyle.css">
+
+    <style>
+      li{
+        font-size: 20px;
+      }
+    </style>
   </head>
 
   <body>
-	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.php"><img src="images/fav1.png" alt="RoofLand" width="115px"></img></a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+      <div class="container">
+        <a class="navbar-brand" href="index.php"><img src="images/fav1.png" alt="RoofLand" width="115px"></img></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="oi oi-menu"></span> Menu
+        </button>
 
         <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
             <li class="nav-item"><a href="agent.php" class="nav-link">Officer</a></li>
-	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
-                Username
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item active" href="profileHousingOfficer.php">Profile</a>
-                <a class="dropdown-item" href="residenceTable.php">My Residence</a>
-                <a class="dropdown-item active" href="viewApplications.php">My Application</a>
-                <a class="dropdown-item" href="#">Logout</a>
-              </div>
-            </li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
+            <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <!-- END nav -->
     <section class="hero-wrap hero-wrap-2 ftco-degree-bg js-fullheight" style="background-image: url('images/giovany3.jpg');" data-stellar-background-ratio="0.5">
-      <div class="overlay"></div><br>
+      <div class="overlay"></div>
       <div class="container">
-        <div class="row no-gutters slider-text justify-content-center align-items-center">
-          <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-end">
-            <div class="booking-form-profileApp">
-              <div class="tab-content">
-                <div id="single">
-                  <div id="user" class="container profile" style="display: none;">
-                    <div class="row">
-                      <div class="col text-center mt-3">
-                        <img alt="picture" src="https://qodebrisbane.com/wp-content/uploads/2019/07/This-is-not-a-person-2-1.jpeg" class="img-lg rounded-circle border shadow" />
-                        <h2 class="mt-3" style="color:white;">Uzumaki Naruto</h2>
-                      </div>
-                    </div>
-                    <div class="row mt-2">
-                      <div class="col">
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                          <li class="nav-item">
-                            <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="true">Profile</a>
-                          </li>
-                        </ul>
-                        <div class="tab-content" id="myTabContent">
-                          <div class="tab-pane fade show active" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                            <table class="table table-hover table-sm table-properties">
-                              <tr v-show="user.given_name">
-                                <th>Full name</th>
-                                <td><!--{{user.given_name}}-->Uzumaki Naruto</td>
-                              </tr>
-                              <tr v-show="user.name">
-                                <th>Username</th>
-                                <td><!--{{user.name}}-->Fishcakes</td>
-                              </tr>
-                              <tr v-show="user.password">
-                                <th>Password</th>
-                                <td><!--{{user.password}}-->101080</td>
-                              </tr>
-                            </table>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+        <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate pb-5 text-center">
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>FAQ <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-3 bread" style="color:black;">FAQ</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END background and title -->
+    <br>
+    <!-- Question 1 -->
+    <h2 class="img mx-md-5">1. How do I apply for a Residence?</h2>
+    <section class="ftco-section ftco-degree-bg services-section img mx-md-5" style="background-image: url(images/bg_2.jpg);">
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row justify-content-start mb-5">
+          <div class="col-md-6 text-center heading-section heading-section-white ftco-animate">
+            <span class="subheading">Work flow</span>
+            <h2 class="mb-3">How it works</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services services-2">
+                  <div class="media-body py-md-4 text-center">
+                    <div class="icon mb-3 d-flex align-items-center justify-content-center"><span>01</span></div>
+                    <h3>Search Residence</h3>
+                    <p>Enter location name and desired price to find residences which fit your criteria</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services services-2">
+                  <div class="media-body py-md-4 text-center">
+                    <div class="icon mb-3 d-flex align-items-center justify-content-center"><span>02</span></div>
+                    <h3>Apply to Reside</h3>
+                    <p>Apply to the housing officer to reside in your chosen residence. Remember to login/signup before submitting your application</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services services-2">
+                  <div class="media-body py-md-4 text-center">
+                    <div class="icon mb-3 d-flex align-items-center justify-content-center"><span>03</span></div>
+                    <h3>Status of Application</h3>
+                    <p>Check the status of your application to see if it has been accepted!</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-12 col-lg-6 d-flex align-self-stretch ftco-animate">
+                <div class="media block-6 services services-2">
+                  <div class="media-body py-md-4 text-center">
+                    <div class="icon mb-3 d-flex align-items-center justify-content-center"><span>04</span></div>
+                    <h3>Close the Deal</h3>
+                    <p>Congradulations! Now you have an affordable place to live in</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+        </div>
       </div>
     </section>
-    <!--END BG-->
+    <br>
+    <!-- Question 2 -->
+    <div class="img mx-md-5">
+      <h2 >2. How do I put my house for lease?</h2>
+        <ul>
+          <li> Create a housing officer account</li>
+          <li> Upon creation, you will be redirected to your profile page where you can create a new residence</li>
+        </ul>
+    </div>
+    <br>
+    <!-- Question 3 -->
+    <div class="img mx-md-5">
+      <h2>3. How do I know if my application was approved?</h2>
+      <ul>
+        <li>Check the application status of your application in "My Applications"</li>
+      </ul>
+    </div>
+    <br>
+    <!-- Question 4 -->
+    <div class="img mx-md-5">
+      <h2>4. If my application was rejected, am I allowed to submit again?</h2>
+      <ul>
+        <li>Yes, you may appeal your application again</li>
+      </ul>
+    </div>
 
-    <!--footer-->
     <footer class="ftco-footer ftco-section">
       <div class="container">
         <div class="row mb-5">
@@ -180,9 +217,6 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
-  <script src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
-  <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
-  <script  src="js/profilescript.js"></script>
+
   </body>
 </html>

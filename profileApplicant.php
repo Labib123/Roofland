@@ -40,25 +40,25 @@ include("connectDB.php");
   <body>
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html"><img src="images/fav1.png" alt="RoofLand" width="115px"></img></a>
+	      <a class="navbar-brand" href="index.php"><img src="images/fav1.png" alt="RoofLand" width="115px"></img></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="agent.html" class="nav-link">Officer</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="agent.php" class="nav-link">Officer</a></li>
+	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
                 Username
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item active" href="profileApplicant.html">Profile</a>
-                <a class="dropdown-item" href="#">My Application</a>
-                <a class="dropdown-item" href="#">Logout</a>
+                <a class="dropdown-item active" href="profileApplicant.php">Profile</a>
+                <a class="dropdown-item" href="applicantApplication.php">My Application</a>
+                <a class="dropdown-item" href="#" <?php session_destroy() ?>>Logout</a>
               </div>
             </li>
 	        </ul>
@@ -78,7 +78,7 @@ include("connectDB.php");
                     <div class="row">
                       <div class="col text-center mt-3">
                         <img alt="picture" src="https://qodebrisbane.com/wp-content/uploads/2019/07/This-is-not-a-person-2-1.jpeg" class="img-lg rounded-circle border shadow" />
-                        <h2 class="mt-3" style="color:white;">Jessica Simps</h2>
+                        <h2 class="mt-3" style="color:white;"><?php echo $resultCheck['fullname']; ?></h2>
                       </div>
                     </div>
 
@@ -133,7 +133,7 @@ include("connectDB.php");
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">RoofLand</h2>
-              <p>Far far waray from your worries, right on the tips of your fingers</p>
+              <p>Convenience within the comforts of home</p>
               <ul class="ftco-footer-social list-unstyled mt-5">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -145,9 +145,8 @@ include("connectDB.php");
             <div class="ftco-footer-widget mb-4 ml-md-4">
               <h2 class="ftco-heading-2">Community</h2>
               <ul class="list-unstyled">
-                <li><a href="index.html"><span class="icon-long-arrow-right mr-2"></span>Search Properties</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>Reviews</a></li>
-                <li><a href="#"><span class="icon-long-arrow-right mr-2"></span>FAQs</a></li>
+                <li><a href="index.php"><span class="icon-long-arrow-right mr-2"></span>Search Properties</a></li> <!-- Link to the home page to search -->
+                <li><a href="faq.php"><span class="icon-long-arrow-right mr-2"></span>FAQs</a></li> <!-- Link to FAQ page -->
               </ul>
             </div>
           </div>
@@ -155,32 +154,31 @@ include("connectDB.php");
             <div class="ftco-footer-widget mb-4 ml-md-4">
               <h2 class="ftco-heading-2">About Us</h2>
               <ul class="list-unstyled">
-                <li><a href="about.html"><span class="icon-long-arrow-right mr-2"></span>Our Story</a></li>
-                <li><a href="agent.html"><span class="icon-long-arrow-right mr-2"></span>Meet the team</a></li>
+                <li><a href="about.php"><span class="icon-long-arrow-right mr-2"></span>Our Story</a></li> <!-- Linked to about page -->
+                <li><a href="agent.php"><span class="icon-long-arrow-right mr-2"></span>Meet the team</a></li> <!-- Linked to agent page -->
               </ul>
             </div>
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">No 15 Jalan Sri Semantan 1, <br>Bukit Damansara,<br> 50490, Kuala Lumpur</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+603 2095 8791</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope pr-4"></span><span class="text">info@helplive.edu.my</span></a></li>
-	              </ul>
-	            </div>
+              <h2 class="ftco-heading-2">Have a Questions?</h2>
+              <div class="block-23 mb-3">
+                <ul>
+                  <li><span class="icon icon-map-marker"></span><span class="text">No 15 Jalan Sri Semantan 1, <br>Bukit Damansara,<br> 50490, Kuala Lumpur</span></li>
+                  <li><a href="#"><span class="icon icon-phone"></span><span class="text">+603 2095 8791</span></a></li>
+                  <li><a href="#"><span class="icon icon-envelope pr-4"></span><span class="text">info@helplive.edu.my</span></a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-12 text-center">
-            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script></p>
+            <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script></p> <!-- Automated year-->
           </div>
         </div>
       </div>
     </footer>
-
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 

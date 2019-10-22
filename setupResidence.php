@@ -34,20 +34,29 @@
 
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-      <div class="container">
-        <a class="navbar-brand" href="index.html">
-          <img src="images/fav1.png" alt="RoofLand" width="115px;">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav">
-          <span class="oi oi-menu"></span> Menu
+	    <div class="container">
+	      <a class="navbar-brand" href="index.php"><img src="images/fav1.png" alt="RoofLand" width="115px"></img></a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
 	      </button>
-        <div class="collapse navbar-collapse" id="ftco-nav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="agent.html" class="nav-link">Officer</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-            <li class="nav-item"><a href="login.html" class="nav-link">Login</a></li>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="agent.php" class="nav-link">Officer</a></li>
+	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
+                Username
+              </a>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="profileHousingOfficer.php">Profile</a>
+                <a class="dropdown-item active" href="residenceTable.php">My Residence</a>
+                <a class="dropdown-item" href="viewApplications.php">My Application</a>
+                <a class="dropdown-item" href="#">Logout</a>
+              </div>
+            </li>
 	        </ul>
 	      </div>
 	    </div>
@@ -60,7 +69,6 @@
       <div class="container">
         <div class="row no-gutters slider-text justify-content-center align-items-center">
           <div class="col-lg-8 col-md-6 ftco-animate d-flex align-items-end">
-            <!-- partial:index.partial.html -->
             <div class="booking-form-setup">
               <div class="tab-content">
                 <div id="single">
@@ -78,19 +86,19 @@
                           <div class="dropdown">
                             <select required name="location" id="location" class="btn-dropdown-location" data-toggle="dropdown">
                               <option value="" disabled selected>Location</option>
-                              <option value="l1">Selangor</option>
-                              <option value="l2">Penang</option>
-                              <option value="l3">Johor</option>
-                              <option value="l4">Sabah</option>
-                              <option value="l5">Sarawak</option>
-                              <option value="l6">Perak</option>
-                              <option value="l7">Kedah</option>
-                              <option value="l8">Kelantan</option>
-                              <option value="l9">Pahang</option>
-                              <option value="l10">Terengganu</option>
-                              <option value="l11">Malacca</option>
-                              <option value="l12">Negeri Sembilan</option>
-                              <option value="l13">Kuala Lumpur</option>
+                              <option value="Selangor">Selangor</option>
+                              <option value="Penang">Penang</option>
+                              <option value="Johor">Johor</option>
+                              <option value="Sabah">Sabah</option>
+                              <option value="Sarawak">Sarawak</option>
+                              <option value="Perak">Perak</option>
+                              <option value="Kedah">Kedah</option>
+                              <option value="Kelantan">Kelantan</option>
+                              <option value="Pahang">Pahang</option>
+                              <option value="Terengganu">Terengganu</option>
+                              <option value="Malacca">Malacca</option>
+                              <option value="Negeri Sembilan">Negeri Sembilan</option>
+                              <option value="Kuala Lumpur">Kuala Lumpur</option>
                             </select>
                           </div>
                         </div>
@@ -99,7 +107,7 @@
                     <div class="form-row">
                       <div class="col">
                         <div class="field-wrap-setup"> <!-- Number of Units -->
-                          <input type="number" required id="numofUnits" name="numofUnits"
+                          <input type="number" required id="numofUnits" name="numOfUnit"
                                  spellcheck="false" placeholder="Number of Units" style="color:white;">
                         </div>
                       </div>
@@ -113,7 +121,7 @@
                     <div class="form-row">
                       <div class="col">
                         <div class="field-wrap-setup"> <!-- Size per Unit -->
-                          <input type="number" required id="sizeperUnit" name="sizeperUnit"
+                          <input type="number" required id="sizeperUnit" name="sizePerUnit"
                                   spellcheck="false" placeholder="Size per Unit (sqr ft)" style="color:white;">
                         </div>
                       </div>
@@ -125,12 +133,10 @@
                           <p style="color:white;">Press CTRL to select multiple options at once</p>
                           <select id="mySelect" name="mySelect" class="btn-dropdown-location" style="font-size:23px">
                             <option value="" disabled selected>Select Facilities</option>
-                            <option value="pool">Swimming Pool</option>
-                            <option value="gym">Gym</option>
-                            <option value="cafeteria">Cafeteria</option>
-                            <option value="squash_court">Squash Court</option>
-                            <option value="bbq">BBQ pit</option>
-                            <option value="familyMart">Family Mart</option>
+                            <option value="Swimming Pool">Swimming Pool</option>
+                            <option value="Gym">Gym</option>
+                            <option value="Cafeteria">Cafeteria</option>
+                            <option value="BBQ">BBQ</option>
                           </select>
                         </div>
                       </div>
@@ -138,7 +144,7 @@
 
                     <div class="form-row">
                       <div class="col">
-                        <input style="color:white;" type="file" name="pic" accept="image/*">
+                        <input style="color:white;" type="file" name="picture" accept="image/*">
                       </div>
                     </div>
                     <br>
@@ -155,58 +161,58 @@
   </div>
 
   <!-- Footer -->
-   <footer class="ftco-footer ftco-section">
-     <div class="container">
-       <div class="row mb-5">
-         <div class="col-md">
-           <div class="ftco-footer-widget mb-4">
-             <h2 class="ftco-heading-2">RoofLand</h2>
-             <p>Homes right at your fingertips</p>
-             <ul class="ftco-footer-social list-unstyled mt-5">
-               <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-               <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-               <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-             </ul>
-           </div>
-         </div>
-         <div class="col-md">
-           <div class="ftco-footer-widget mb-4 ml-md-4">
-             <h2 class="ftco-heading-2">Community</h2>
-             <ul class="list-unstyled">
-               <li><a href="index.html"><span class="icon-long-arrow-right mr-2"></span>Search Properties</a></li> <!-- Link to the home page to search -->
-               <li><a href="faq.html"><span class="icon-long-arrow-right mr-2"></span>FAQs</a></li> <!-- Link to FAQ page -->
-             </ul>
-           </div>
-         </div>
-         <div class="col-md">
-           <div class="ftco-footer-widget mb-4 ml-md-4">
-             <h2 class="ftco-heading-2">About Us</h2>
-             <ul class="list-unstyled">
-               <li><a href="about.html"><span class="icon-long-arrow-right mr-2"></span>Our Story</a></li> <!-- Linked to about page -->
-               <li><a href="agent.html"><span class="icon-long-arrow-right mr-2"></span>Meet the team</a></li> <!-- Linked to agent page -->
-             </ul>
-           </div>
-         </div>
-         <div class="col-md">
-           <div class="ftco-footer-widget mb-4">
-             <h2 class="ftco-heading-2">Have a Questions?</h2>
-             <div class="block-23 mb-3">
-               <ul>
-                 <li><span class="icon icon-map-marker"></span><span class="text">No 15 Jalan Sri Semantan 1, <br>Bukit Damansara,<br> 50490, Kuala Lumpur</span></li>
-                 <li><a href="#"><span class="icon icon-phone"></span><span class="text">+603 2095 8791</span></a></li>
-                 <li><a href="#"><span class="icon icon-envelope pr-4"></span><span class="text">info@helplive.edu.my</span></a></li>
-               </ul>
-             </div>
-           </div>
-         </div>
-       </div>
-       <div class="row">
-         <div class="col-md-12 text-center">
-           <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script></p> <!-- Automated year-->
-         </div>
-       </div>
-     </div>
-   </footer>
+  <footer class="ftco-footer ftco-section">
+    <div class="container">
+      <div class="row mb-5">
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">RoofLand</h2>
+            <p>Convenience within the comforts of home</p>
+            <ul class="ftco-footer-social list-unstyled mt-5">
+              <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+              <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4 ml-md-4">
+            <h2 class="ftco-heading-2">Community</h2>
+            <ul class="list-unstyled">
+              <li><a href="index.php"><span class="icon-long-arrow-right mr-2"></span>Search Properties</a></li> <!-- Link to the home page to search -->
+              <li><a href="faq.php"><span class="icon-long-arrow-right mr-2"></span>FAQs</a></li> <!-- Link to FAQ page -->
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4 ml-md-4">
+            <h2 class="ftco-heading-2">About Us</h2>
+            <ul class="list-unstyled">
+              <li><a href="about.php"><span class="icon-long-arrow-right mr-2"></span>Our Story</a></li> <!-- Linked to about page -->
+              <li><a href="agent.php"><span class="icon-long-arrow-right mr-2"></span>Meet the team</a></li> <!-- Linked to agent page -->
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Have a Questions?</h2>
+            <div class="block-23 mb-3">
+              <ul>
+                <li><span class="icon icon-map-marker"></span><span class="text">No 15 Jalan Sri Semantan 1, <br>Bukit Damansara,<br> 50490, Kuala Lumpur</span></li>
+                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+603 2095 8791</span></a></li>
+                <li><a href="#"><span class="icon icon-envelope pr-4"></span><span class="text">info@helplive.edu.my</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script></p> <!-- Automated year-->
+        </div>
+      </div>
+    </div>
+  </footer>
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
