@@ -177,6 +177,7 @@ if (isset($_POST['login_applicant'])) {
 
 
 //--------------------Jun's codes-----------------------
+//setupResidence
 if (isset($_POST['add_residence'])){
   $residenceName = $_POST['residenceName'];
   $location = $_POST['location'];
@@ -184,21 +185,42 @@ if (isset($_POST['add_residence'])){
   $mySelect = $_POST['mySelect'];
   $sizeperUnit =$_POST['sizePerUnit'];
   $numofUnits = $_POST['numOfUnit'];
-
-  // $officerID =  $_SESSION['officerID'];
-  // $query = "SELECT * FROM housingOfficer WHERE officerID=$officerID";
-  // $result = mysqli_query($query);
-  // $num_rows = mysqli_num_rows($result);
-  echo "im working";
+  // // $officerID =  $_SESSION['officerID'];
+  // // $query = "SELECT * FROM housingOfficer WHERE officerID=$officerID";
+  // // $result = mysqli_query($query);
+  // // $num_rows = mysqli_num_rows($result);
+  // echo "im working";
 
   //insert issue - Cannot add or update a child row: a foreign key constraint fails
   $res = "INSERT INTO residence (residenceName, location, price, facilities, sizePerUnit, numOfUnit, officerID)
            VALUES('$residenceName', '$location', '$monthlyRent', '$mySelect', '$sizeperUnit', '$numofUnits', 2)"; //2 is supposed to foerign key from the housingofficer table
-  if(mysqli_query($connection, $res)){
-    echo "Inserted";
-  }else{
-    echo "Error " .mysqli_error($connection);
-  }
+  // if(mysqli_query($connection, $res)){
+  //   echo "Inserted";
+  // }else{
+  //   echo "Error " .mysqli_error($connection);
+  // }
 }
 
+//search_residence
+// $filter = "SELECT * FROM residences WHERE location = ''";
+if(isset($_POST['search_residence'])){
+  $locationToSearch = $_GET('location');
+  $priceToSearch = $_GET('price');
+
+  $filter = "SELECT * FROM residences WHERE location = $locationToSearch AND price = $priceToSearch";
+  $serach_result = filterTable($filter);
+  // $query_login = "SELECT * from applicant where username = '$username' and password='$password'";
+  //
+  // $results =mysqli_query($connection,$query_login);
+}
+else{
+  $filter = "SELECT * FROM residences";
+  $search_result = filterTable($filter);
+}
+
+function filterTable($filter){
+  $connection = mysqli_connect("localhost","root","","roofland");
+  $filter_Result = mysqli_query($connection,$filter);
+  return $filter_Result;
+}
 ?>

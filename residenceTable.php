@@ -31,25 +31,25 @@
     <style>
 
         .resID{
-        width: 14.2%;
+        width: 12.5%;
         }
         .resName{
-        width: 14.2%;
+        width: 12.5%;
         }
         .resLocation{
-        width: 14.2%;
+        width: 12.5%;
         }
         .resRent{
-        width: 14.2%;
+        width: 12.5%;
         }
         .resFacility{
-        width: 14.2%;
+        width: 12.5%;
         }
         .resUnit{
-        width: 14.2%;
+        width: 12.5%;
         }
         .resSize{
-        width: 14.2%;
+        width: 12.5%;
         }
 
     </style>
@@ -77,7 +77,7 @@
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="profileHousingOfficer.php">Profile</a>
                 <a class="dropdown-item active" href="residenceTable.php">My Residence</a>
-                <a class="dropdown-item active" href="viewApplications.php">My Application</a>
+                <a class="dropdown-item" href="viewApplications.php">My Application</a>
                 <a class="dropdown-item" href="#">Logout</a>
               </div>
             </li>
@@ -114,8 +114,8 @@
                 <th class="resRent">Monthly Rent (RM)</th>
                 <th class="resFacility">Facilities</th>
                 <th class="resUnit">Number of Units</th>
-                <th class="resSize">Size per unit (sqr ft)</th>
-                <th><a data-target="#myModal" href="setupResidence.php" >
+                <th class="resSize">Size per unit <br>(sqr ft)</th>
+                <th class="resSize"><a data-target="#myModal" href="setupResidence.php" >
                   <i class="fa fa-plus" aria-hidden="true"></i>
                 </a></th>
               </tr>
@@ -142,6 +142,7 @@
                               <td class="resFacility">'.$field5name.'</td>
                               <td class="resUnit">'.$field6name.'</td>
                               <td class="resSize">'.$field7name.'</td>
+                              <td class="resSize"></td>
                           </tr>
                       </table>
                       <br>';

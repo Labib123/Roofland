@@ -1,3 +1,7 @@
+<?php
+  include("connectDB.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -95,7 +99,9 @@
                         </select>
                       </div>
                   </div>
-                  <button type="submit" id='search12' class="button button-block"/>Search</button>
+                  <a href="properties.php">
+                    <button name="search_residence" type="submit" id='search12' class="button button-block">Search</button>
+                  </a>
                 </form>
               </div> <!-- END Single -->
             </div> <!-- END tab conetent -->
