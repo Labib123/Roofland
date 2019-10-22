@@ -73,12 +73,12 @@
               <div class="tab-content">
                 <div id="single">
                   <h1 class='booking-header' style="color:white;">Setup Residence</h1>
-                  <form action = "residenceTable.php" method="post" name="setupResidence">
+                  <form action = "connectDB.php" method="post">
                     <div class="form-row">
                       <div class="col">
                         <div class="field-wrap-setup"> <!-- Residence Name -->
                           <input required id="residenceName" name="residenceName"
-                                autocomplete="off" spellcheck="false" placeholder="Residence Name" style="color:white;">
+                                spellcheck="false" placeholder="Residence Name" style="color:white;">
                         </div>
                       </div>
                       <div class="col">
@@ -108,13 +108,13 @@
                       <div class="col">
                         <div class="field-wrap-setup"> <!-- Number of Units -->
                           <input type="number" required id="numofUnits" name="numOfUnit"
-                                 spellcheck="false" placeholder="Number of Units" style="color:white;" min="0">
+                                 spellcheck="false" placeholder="Number of Units" style="color:white;">
                         </div>
                       </div>
                       <div class="col">
                         <div class="field-wrap-setup"> <!-- Monthly Rent -->
                           <input type="number" required id="monthlyRent" name="monthlyRent"
-                                spellcheck="false" placeholder="Monthly Rent (RM)" style="color:white;" max="1500">
+                                spellcheck="false" placeholder="Monthly Rent (RM)" style="color:white;">
                         </div>
                       </div>
                     </div>
@@ -122,7 +122,7 @@
                       <div class="col">
                         <div class="field-wrap-setup"> <!-- Size per Unit -->
                           <input type="number" required id="sizeperUnit" name="sizePerUnit"
-                                  spellcheck="false" placeholder="Size per Unit (sqr ft)" style="color:white; "min="300">
+                                  spellcheck="false" placeholder="Size per Unit (sqr ft)" style="color:white;">
                         </div>
                       </div>
                     </div>
@@ -234,6 +234,12 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
   <script src="js/google-map.js"></script>
   <script src="js/main.js"></script>
+
+  <script>
+  function show_alert() {
+    alert("Residence Created");
+  }
+  </script>
 
   <script>
    var btn = document.getElementById("btn");
