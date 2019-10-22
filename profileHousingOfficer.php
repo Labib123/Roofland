@@ -47,7 +47,7 @@
               <div class="dropdown-menu">
                 <a class="dropdown-item active" href="profileHousingOfficer.php">Profile</a>
                 <a class="dropdown-item" href="residenceTable.php">My Residence</a>
-                <a class="dropdown-item active" href="viewApplications.php">My Application</a>
+                <a class="dropdown-item" href="viewApplications.php">My Application</a>
                 <a class="dropdown-item" href="#">Logout</a>
               </div>
             </li>
