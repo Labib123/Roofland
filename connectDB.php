@@ -187,8 +187,8 @@ if (isset($_POST['add_residence'])){
   $location = $_POST['location'];
   $monthlyRent = $_POST['monthlyRent'];
   $mySelect = $_POST['mySelect'];
-  $sizeperUnit =$_POST['sizeperUnit'];
-  $numofUnits = $_POST['numofUnits'];
+  $sizeperUnit =$_POST['sizePerUnit'];
+  $numofUnits = $_POST['numOfUnit'];
 
   // $officerID =  $_SESSION['officerID'];
   // $query = "SELECT * FROM housingOfficer WHERE officerID=$officerID";

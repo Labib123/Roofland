@@ -1,7 +1,8 @@
 <?php
   include("connectDB.php");
   session_start();
-  $username = $_SESSION['username'];
+  $username = $_SESSION['username']; // Undefined index: applicantID
+  // syntax error, unexpected 'username' (T_STRING), expecting ',' or ';'
   $query = "SELECT fullname, username, email, monthlyIncome FROM applicant WHERE username = '$username'";
   $result = mysqli_query($connection, $query);
   $resultCheck = mysqli_num_rows($result);
@@ -55,7 +56,7 @@
               <div class="dropdown-menu">
                 <a class="dropdown-item active" href="profileApplicant.php">Profile</a>
                 <a class="dropdown-item" href="applicantApplication.php">My Application</a>
-                <a class="dropdown-item" href="#">Logout</a>
+                <a class="dropdown-item" href="#" <?php session_destroy() ?>>Logout</a>
               </div>
             </li>
 	        </ul>

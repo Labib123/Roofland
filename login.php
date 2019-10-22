@@ -109,11 +109,13 @@ include("connectDB.php");
                                 <input style="color:white;"placeholder="Monthly Income" type="decimal" name="monthlyIncome" required autocomplete="off"/>
                               </div>
                               <!-- <form class="" action="index.php" method="post"> -->
+
                               <select  name="price" class="btn-dropdown-location" data-toggle="dropdown">
                                 <option value="" disabled selected>User type</option>
                                 <option value="HousingOfficer">Housing Officer</option>
                                 <option value="Applicant">Applicant</option>
                               </select>
+                              <div class="field-wrap"></div>
                               <div class="">
                                 <button type="submit" class=" button button-block" name="applicant_reg">Get Started</button>
                               </div>
