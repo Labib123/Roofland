@@ -1,3 +1,7 @@
+<?php
+  include("connectDB.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -66,105 +70,20 @@
     </section>
 
 		<section class="ftco-section">
+      <?php while ($row = mysqli_query($connection,$search_result));?>
     	<div class="container">
         <div class="row">
         	<div class="col-md-4">
         		<div class="property-wrap ftco-animate">
         			<a href="properties-single.php" class="img" style="background-image: url(images/work-1.jpg);"></a>
         			<div class="text">
-        				<p class="price"><span class="orig-price">RM 1000<small>/month</small></span></p>
+        				<p class="price"><span class="orig-price">RM<?php echo $row['price']?><small>/month</small></span></p>
         				<ul class="property_list">
-        					<li><span class="flaticon-bed"></span>3</li>
-        					<li><span class="flaticon-floor-plan"></span>1,878 sqft</li>
+        					<li><span class="flaticon-bed"></span><?php echo $row['numOfUnit']?></li>
+        					<li><span class="flaticon-floor-plan"><?php echo $row['sizePerUnit']?></span>sqft</li>
         				</ul>
-        				<h3><a href="properties-single.php">Damansara Exclusive Condominium</a></h3>
-        				<span class="location">Selangor</span>
-        				<a href="properties-single.php" class="d-flex align-items-center justify-content-center btn-custom">
-        					<span class="ion-ios-link"></span>
-        				</a>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="col-md-4">
-        		<div class="property-wrap ftco-animate">
-        			<a href="properties-single.php" class="img" style="background-image: url(images/twins.jpeg);"></a>
-        			<div class="text">
-        				<p class="price"><span class="orig-price">RM 800<small>/month</small></span></p>
-        				<ul class="property_list">
-        					<li><span class="flaticon-bed"></span>1</li>
-        					<li><span class="flaticon-floor-plan"></span>1,878 sqft</li>
-        				</ul>
-        				<h3><a href="properties-single.php">Twins Condominium</a></h3>
-        				<span class="location">Selangor</span>
-        				<a href="properties-single.php" class="d-flex align-items-center justify-content-center btn-custom">
-        					<span class="ion-ios-link"></span>
-        				</a>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="col-md-4">
-        		<div class="property-wrap ftco-animate">
-        			<a href="properties-single.php" class="img" style="background-image: url(images/prima.jpeg);"></a>
-        			<div class="text">
-        				<p class="price"><span class="orig-price">RM850 <small>/month</small></span></p>
-        				<ul class="property_list">
-        					<li><span class="flaticon-bed"></span>2</li>
-        					<li><span class="flaticon-floor-plan"></span>1,878 sqft</li>
-        				</ul>
-        				<h3><a href="properties-single.php">Prima 16 Phase 1</a></h3>
-        				<span class="location">Selangor</span>
-        				<a href="properties-single.php" class="d-flex align-items-center justify-content-center btn-custom">
-        					<span class="ion-ios-link"></span>
-        				</a>
-        			</div>
-        		</div>
-        	</div>
-
-        	<div class="col-md-4">
-        		<div class="property-wrap ftco-animate">
-        			<a href="properties-single.php" class="img" style="background-image: url(images/cyberjaya.jpg);"></a>
-        			<div class="text">
-        				<p class="price"><span class="orig-price">RM 900<small>/month</small></span></p>
-        				<ul class="property_list">
-        					<li><span class="flaticon-bed"></span>3</li>
-        					<li><span class="flaticon-floor-plan"></span>1,878 sqft</li>
-        				</ul>
-        				<h3><a href="properties-single.php">The ARC @ Damansara</a></h3>
-        				<span class="location">Selangor</span>
-        				<a href="properties-single.php" class="d-flex align-items-center justify-content-center btn-custom">
-        					<span class="ion-ios-link"></span>
-        				</a>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="col-md-4">
-        		<div class="property-wrap ftco-animate">
-        			<a href="properties-single.php" class="img" style="background-image: url(images/brickfields.jpg);"></a>
-        			<div class="text">
-        				<p class="price"><span class="orig-price">RM 950<small>/month</small></span></p>
-        				<ul class="property_list">
-        					<li><span class="flaticon-bed"></span>3</li>
-        					<li><span class="flaticon-floor-plan"></span>1,878 sqft</li>
-        				</ul>
-        				<h3><a href="properties-single.php">Paramount View</a></h3>
-        				<span class="location">Selangor</span>
-        				<a href="properties-single.php" class="d-flex align-items-center justify-content-center btn-custom">
-        					<span class="ion-ios-link"></span>
-        				</a>
-        			</div>
-        		</div>
-        	</div>
-        	<div class="col-md-4">
-        		<div class="property-wrap ftco-animate">
-        			<a href="properties-single.php" class="img" style="background-image: url(images/scholar.jpg);"></a>
-        			<div class="text">
-        				<p class="price"><span class="orig-price">RM 1000<small>/month</small></span></p>
-        				<ul class="property_list">
-        					<li><span class="flaticon-bed"></span>1</li>
-        					<li><span class="flaticon-floor-plan"></span>1,878 sqft</li>
-        				</ul>
-        				<h3><a href="properties-single.php">Scholar's Inn</a></h3>
-        				<span class="location">Selangor</span>
+        				<h3><a href="properties-single.php"><?php echo $row['residenceName']?></a></h3>
+        				<span class="location"><?php echo $row['location']?></span>
         				<a href="properties-single.php" class="d-flex align-items-center justify-content-center btn-custom">
         					<span class="ion-ios-link"></span>
         				</a>
@@ -172,7 +91,8 @@
         		</div>
         	</div>
         </div>
-    	</div>
+    	</div> <!--container -->
+
     </section>
     <!-- Footer -->
     <footer class="ftco-footer ftco-section">
