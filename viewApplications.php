@@ -36,21 +36,21 @@
 	        <span class="oi oi-menu"></span>Menu
 	      </button>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
+        <div class="collapse navbar-collapse" id="ftco-nav">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
             <li class="nav-item"><a href="agent.php" class="nav-link">Officer</a></li>
-	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
-                Username
+                officer123
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item" href="profileHousingOfficer.php">Profile</a>
+                <a class="dropdown-item active" href="profileApplicant.php">Profile</a>
                 <a class="dropdown-item" href="residenceTable.php">My Residence</a>
-                <a class="dropdown-item active" href="viewApplications.php">My Application</a>
-                <a class="dropdown-item" href="#">Logout</a>
+                <a class="dropdown-item" href="viewApplications.php">My Application</a>
+                <a class="dropdown-item" href="login.php">Logout</a>
               </div>
             </li>
 	        </ul>

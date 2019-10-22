@@ -35,20 +35,20 @@
 	      </button>
 
         <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav ml-auto">
             <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
+            <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
             <li class="nav-item"><a href="agent.php" class="nav-link">Officer</a></li>
-	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
-                Username
+                officer123
               </a>
               <div class="dropdown-menu">
-                <a class="dropdown-item active" href="profileHousingOfficer.php">Profile</a>
+                <a class="dropdown-item active" href="profileApplicant.php">Profile</a>
                 <a class="dropdown-item" href="residenceTable.php">My Residence</a>
-                <a class="dropdown-item active" href="viewApplications.php">My Application</a>
-                <a class="dropdown-item" href="#">Logout</a>
+                <a class="dropdown-item" href="viewApplications.php">My Application</a>
+                <a class="dropdown-item" href="login.php">Logout</a>
               </div>
             </li>
 	        </ul>
@@ -68,7 +68,7 @@
                     <div class="row">
                       <div class="col text-center mt-3">
                         <img alt="picture" src="https://qodebrisbane.com/wp-content/uploads/2019/07/This-is-not-a-person-2-1.jpeg" class="img-lg rounded-circle border shadow" />
-                        <h2 class="mt-3" style="color:white;">Uzumaki Naruto</h2>
+                        <h2 class="mt-3" style="color:white;">officer123</h2>
                       </div>
                     </div>
                     <div class="row mt-2">
@@ -83,15 +83,15 @@
                             <table class="table table-hover table-sm table-properties">
                               <tr v-show="user.given_name">
                                 <th>Full name</th>
-                                <td><!--{{user.given_name}}-->Uzumaki Naruto</td>
+                                <td><!--{{user.given_name}}-->Jennifer Hudson</td>
                               </tr>
                               <tr v-show="user.name">
                                 <th>Username</th>
-                                <td><!--{{user.name}}-->Fishcakes</td>
+                                <td><!--{{user.name}}-->officer123</td>
                               </tr>
                               <tr v-show="user.password">
                                 <th>Password</th>
-                                <td><!--{{user.password}}-->101080</td>
+                                <td><!--{{user.password}}-->officer123</td>
                               </tr>
                             </table>
                           </div>

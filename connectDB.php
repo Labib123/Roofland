@@ -3,7 +3,7 @@
 // ini_set('display_errors', 1);
 // ini_set('display_startup_errors', 1);
 // error_reporting(E_ALL);
-session_start();
+// session_start();
 $connection=mysqli_connect("localhost","root","","roofland");
 
 $errors = array();
@@ -135,12 +135,23 @@ if (isset($_POST['login_applicant'])) {
   $username = $_POST['username'];
   $password = $_POST['password'];
 
+  $adminUser = "officer123";
+  $adminPass= "officer123";
 
   if (empty($username)) {
   	array_push($errors, "Username is required");
   }
   elseif (empty($password)) {
   	array_push($errors, "Password is required");
+  }
+  elseif ( $username == $adminUser && $password==$adminPass)
+  {
+
+    $_SESSION['username']=$username;
+    $_SESSION['password']=$password;
+    // $_SESSION['email']=$email  ;
+    // $_SESSION['monthlyIncome']=$monthlyIncome;
+    echo "<script>window.open('profileHousingOfficer.php','_self')</script>";
   }
   else
   {
@@ -154,12 +165,12 @@ if (isset($_POST['login_applicant'])) {
        //
        // if ($password==$pass_check)
        // {
-         //session_start();      //<--------- COMMENT THIS OUT. Not necessary  to call session_start again.
-         $_SESSION['fullname']=$fullname;
+         session_start();      //<--------- COMMENT THIS OUT. Not necessary  to call session_start again.
+         // $_SESSION['fullname']=$fullname;
          $_SESSION['username']=$username;
          $_SESSION['password']=$password;
-         $_SESSION['email']=$email  ;
-         $_SESSION['monthlyIncome']=$monthlyIncome;
+         // $_SESSION['email']=$email  ;
+         // $_SESSION['monthlyIncome']=$monthlyIncome;
          echo "<script>window.open('profileApplicant.php','_self')</script>";
        // }
 
