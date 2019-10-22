@@ -1,5 +1,6 @@
 <?php
 include("connectDB.php");
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -123,7 +124,7 @@ include("connectDB.php");
 
                           <div style="margin-bottom:0px" class="col-md-12">
                             <div  style="color: rgba(255, 255, 255,0.5);font-size:20px; font-weight:bold " class="col-md-4">
-                            
+
                             </div>
                             <select  name="price" class="btn-dropdown-location" data-toggle="dropdown">
                               <option value="" disabled selected>User type</option>

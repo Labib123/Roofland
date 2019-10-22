@@ -1,4 +1,15 @@
+<?php
+session_start();
+include("connectDB.php");
+
+// session_destroy();
+// if(isset($_SESSION['username'])){
+//   echo "<script>alert('test')</script>";
+// }
+
+ ?>
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <title>RoofLand</title>
@@ -87,19 +98,19 @@
                               </tr>
                               <tr v-show="user.name">
                                 <th>Username</th>
-                                <td><!--{{user.name}}--> Jess987</td>
+                                <td><?php echo $_SESSION['username'] ?> </td>
                               </tr>
                               <tr v-show="user.password">
                                 <th>Password</th>
-                                <td><!--{{user.password}}--> 1234567</td>
+                                <td><?php echo $_SESSION['password'] ?></td>
                               </tr>
                               <tr v-show="user.email">
                                 <th>Email</th>
-                                <td><!--{{user.email}}--> jess@gmail.com</td>
+                                <td><?php echo $_SESSION['email'] ?></td>
                               </tr>
                               <tr><!--v-show="user.income"-->
                                 <th>Monthly Income</th>
-                                <td>RM<!--{{user.income}}-->2100</td>
+                                <td><?php echo $_SESSION['monthlyIncome'] ?></td>
                               </tr>
                             </table>
                           </div>

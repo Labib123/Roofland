@@ -1,10 +1,5 @@
-<?php
-// session_destroy();
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
-session_start();
-$connection=mysqli_connect("localhost","root","","roofland");
+<?php // initializing variables
+ include("connectDB.php");
 
 $errors = array();
 
@@ -39,7 +34,6 @@ if (isset($_POST['applicant_reg']))
       $userType = filter_input(INPUT_POST, 'userType', FILTER_SANITIZE_STRING);
       $monthlyIncome = filter_input(INPUT_POST, 'monthlyIncome', FILTER_SANITIZE_STRING);
 
-      // if ($userType ==)
 
 
 
@@ -154,9 +148,6 @@ if (isset($_POST['login_applicant'])) {
        // if ($password==$pass_check)
        // {
          $_SESSION['username']=$username;
-         $_SESSION['password']=$password;
-         $_SESSION['email']=$email  ;
-         $_SESSION['monthlyIncome']=$monthlyIncome;
          echo "<script>window.open('profileApplicant.php','_self')</script>";
 
        // }
@@ -193,6 +184,4 @@ if (isset($_POST['add_residence'])){
   }else{
     echo "Error " .mysqli_error($connection);
   }
-}
-
-?>
+} ?>
