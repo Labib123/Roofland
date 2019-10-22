@@ -135,12 +135,23 @@ if (isset($_POST['login_applicant'])) {
   $username = $_POST['username'];
   $password = $_POST['password'];
 
+  $adminUser = "officer123";
+  $adminPass= "officer123";
 
   if (empty($username)) {
   	array_push($errors, "Username is required");
   }
   elseif (empty($password)) {
   	array_push($errors, "Password is required");
+  }
+  elseif ( $username == $adminUser && $password==$adminPass)
+  {
+
+    $_SESSION['username']=$username;
+    $_SESSION['password']=$password;
+    // $_SESSION['email']=$email  ;
+    // $_SESSION['monthlyIncome']=$monthlyIncome;
+    echo "<script>window.open('profileHousingOfficer.php','_self')</script>";
   }
   else
   {
