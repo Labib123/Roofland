@@ -78,7 +78,7 @@
                       <div class="col">
                         <div class="field-wrap-setup"> <!-- Residence Name -->
                           <input required id="residenceName" name="residenceName"
-                                spellcheck="false" placeholder="Residence Name" style="color:white;">
+                                autocomplete="off" spellcheck="false" placeholder="Residence Name" style="color:white;">
                         </div>
                       </div>
                       <div class="col">
@@ -114,7 +114,7 @@
                       <div class="col">
                         <div class="field-wrap-setup"> <!-- Monthly Rent -->
                           <input type="number" required id="monthlyRent" name="monthlyRent"
-                                spellcheck="false" placeholder="Monthly Rent (RM)" style="color:white;" min="500" max="1500">
+                                spellcheck="false" placeholder="Monthly Rent (RM)" style="color:white;" max="1500">
                         </div>
                       </div>
                     </div>
@@ -122,7 +122,7 @@
                       <div class="col">
                         <div class="field-wrap-setup"> <!-- Size per Unit -->
                           <input type="number" required id="sizeperUnit" name="sizePerUnit"
-                                  spellcheck="false" placeholder="Size per Unit (sqr ft)" style="color:white; "min="500">
+                                  spellcheck="false" placeholder="Size per Unit (sqr ft)" style="color:white; "min="300">
                         </div>
                       </div>
                     </div>
