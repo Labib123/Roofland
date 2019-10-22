@@ -65,7 +65,7 @@
       </div>
     </section>
 
-		<section class="ftco-section">
+    <section class="ftco-section">
     	<div class="container">
         <div class="row">
         	<div class="col-md-4">
@@ -77,7 +77,7 @@
         					<li><span class="flaticon-bed"></span>3</li>
         					<li><span class="flaticon-floor-plan"></span>1,878 sqft</li>
         				</ul>
-        				<h3><a href="properties-single.php">Damansara Exclusive Condominium</a></h3>
+        				<h3><a href="properties-single.php">Damansara Exclusive</a></h3>
         				<span class="location">Selangor</span>
         				<a href="properties-single.php" class="d-flex align-items-center justify-content-center btn-custom">
         					<span class="ion-ios-link"></span>

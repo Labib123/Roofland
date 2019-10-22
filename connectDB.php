@@ -152,6 +152,7 @@ if (isset($_POST['login_applicant'])) {
     // $_SESSION['email']=$email  ;
     // $_SESSION['monthlyIncome']=$monthlyIncome;
     echo "<script>window.open('profileHousingOfficer.php','_self')</script>";
+    // why profileHousinfOfficer.php?
   }
   else
   {
