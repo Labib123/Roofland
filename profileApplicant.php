@@ -94,7 +94,7 @@ include("connectDB.php");
                             <table class="table table-hover table-sm table-properties">
                               <tr v-show="user.given_name">
                                 <th>Full name</th>
-                                <td><?php echo $_SESSION['fullname']?></td>
+                                <td>Cymantha Sothiar</td>
                               </tr>
                               <tr v-show="user.name">
                                 <th>Username</th>
@@ -106,11 +106,11 @@ include("connectDB.php");
                               </tr>
                               <tr v-show="user.email">
                                 <th>Email</th>
-                                <td><?php echo $_SESSION['email'] ?></td>
+                                <td>cymantha@yahoo.com</td>
                               </tr>
                               <tr><!--v-show="user.income"-->
                                 <th>Monthly Income</th>
-                                <td><?php echo $_SESSION['monthlyIncome'] ?></td>
+                                <td>RM3000</td>
                               </tr>
                             </table>
                           </div>
