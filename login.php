@@ -107,7 +107,7 @@ include("connectDB.php");
                                 <input style="color:white;"placeholder="Password" type="password" name="password" required autocomplete="off"/>
                               </div>
                               <div class="field-wrap">
-                                <input style="color:white;"placeholder="Monthly Income" type="decimal" name="monthlyIncome" required autocomplete="off"/>
+                                <input style="color:white;"placeholder="Monthly Income" type="number" name="monthlyIncome" required autocomplete="off"/>
                               </div>
                               <!-- <form class="" action="index.php" method="post"> -->
 
@@ -118,7 +118,7 @@ include("connectDB.php");
                               </select>
                               <div class="field-wrap"></div>
                               <div class="">
-                                <button type="submit" class=" button button-block" name="applicant_reg" onclick="alert_signup()">Get Started</button>
+                                <button type="submit" class=" button button-block" name="applicant_reg">Get Started</button>
 
                               </div>
                             </div>
@@ -208,11 +208,11 @@ include("connectDB.php");
   <script src="js/main.js"></script>
 <script>
 
-// // Code to show show_alert
-function alert_signup() {
-  alert("Applicant successfully registered");
-}
-
+// // // Code to show show_alert
+// function alert_signup() {
+//   alert("Applicant successfully registered");
+// }
+//
 
 
 $('.tab a').on('click', function (e) {

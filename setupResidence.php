@@ -239,10 +239,21 @@
    var btn = document.getElementById("btn");
    btn.addEventListener("click" , multipleFunc);;
    function multipleFunc() {
+     let selectDOM = document.getElementById("mySelect");
      document.getElementById("mySelect").multiple = true;
+    //try this
+    console.log("The select object", selectDOM);
+    console.log("Value", selectDOM.value);
    }
   </script>
-  </body>
+</body>
+<!-- btw, the setup residence has a tiny problem. only one facility is going in to the database -->
+<!-- That's obviously a javascript issue. Fire your front end developer. -->
+<!-- bruhhh... this is junana speaking -->
+<!-- fire yourself. You need to debug it properly using the console. -->
+<!-- damn that dropdown box -->
+<!-- the dropdon box is a multi select. maybe thats why its not working . It should give an array I think?-->
+<!-- i have never seen a dropdown box that works like that. i was just experimenting........ time to change -->
 </html>
 
 <?php

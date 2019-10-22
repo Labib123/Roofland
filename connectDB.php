@@ -3,7 +3,7 @@
 // ini_set('display_errors', 1);
 // ini_set('display_startup_errors', 1);
 // error_reporting(E_ALL);
-// session_start();
+session_start();
 $connection=mysqli_connect("localhost","root","","roofland");
 
 $errors = array();
@@ -136,7 +136,6 @@ if (isset($_POST['login_applicant'])) {
   $password = $_POST['password'];
 
 
-
   if (empty($username)) {
   	array_push($errors, "Username is required");
   }
@@ -155,16 +154,13 @@ if (isset($_POST['login_applicant'])) {
        //
        // if ($password==$pass_check)
        // {
-        session_start();
+         //session_start();      //<--------- COMMENT THIS OUT. Not necessary  to call session_start again.
+         $_SESSION['fullname']=$fullname;
          $_SESSION['username']=$username;
          $_SESSION['password']=$password;
          $_SESSION['email']=$email  ;
          $_SESSION['monthlyIncome']=$monthlyIncome;
          echo "<script>window.open('profileApplicant.php','_self')</script>";
-
-
-
-
        // }
 
      }else{
