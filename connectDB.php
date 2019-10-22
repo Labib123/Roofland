@@ -3,7 +3,7 @@
 // ini_set('display_errors', 1);
 // ini_set('display_startup_errors', 1);
 // error_reporting(E_ALL);
-session_start();
+// session_start();
 $connection=mysqli_connect("localhost","root","","roofland");
 
 $errors = array();
@@ -58,7 +58,9 @@ if (isset($_POST['applicant_reg']))
     	mysqli_query($connection, $query);
     	$_SESSION['username'] = $username;
     	$_SESSION['success'] = "You are now logged in";
-    	header('location: profileApplicant.php');
+
+    	header('location: login.php');
+      echo "<script>alert('Applicant registered succesfully!')</script>";
       // }
       // else
       // {
@@ -153,11 +155,15 @@ if (isset($_POST['login_applicant'])) {
        //
        // if ($password==$pass_check)
        // {
+        session_start();
          $_SESSION['username']=$username;
          $_SESSION['password']=$password;
          $_SESSION['email']=$email  ;
          $_SESSION['monthlyIncome']=$monthlyIncome;
          echo "<script>window.open('profileApplicant.php','_self')</script>";
+
+
+
 
        // }
 

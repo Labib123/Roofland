@@ -118,7 +118,8 @@ include("connectDB.php");
                               </select>
                               <div class="field-wrap"></div>
                               <div class="">
-                                <button type="submit" class=" button button-block" name="applicant_reg">Get Started</button>
+                                <button type="submit" class=" button button-block" name="applicant_reg" onclick="alert_signup()">Get Started</button>
+
                               </div>
                             </div>
                           </form>
@@ -207,9 +208,9 @@ include("connectDB.php");
   <script src="js/main.js"></script>
 <script>
 
-// Code to show show_alert
+// // Code to show show_alert
 function alert_signup() {
-  alert("Account Created");
+  alert("Applicant successfully registered");
 }
 
 
