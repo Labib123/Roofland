@@ -77,7 +77,7 @@
                     <div class="form-row">
                       <div class="col">
                         <div class="field-wrap-setup"> <!-- Residence Name -->
-                          <input required id="residenceName" name="residenceName"
+                          <input required id="residenceName" name="residenceName" autocomplete="off"
                                 spellcheck="false" placeholder="Residence Name" style="color:white;">
                         </div>
                       </div>
