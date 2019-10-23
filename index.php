@@ -179,7 +179,7 @@
                   <div class="media-body py-md-4 text-center">
                     <div class="icon mb-3 d-flex align-items-center justify-content-center"><span>01</span></div>
                     <h3>Search Residence</h3>
-                    <p>Enter location name and desired price to find residences which fit your criteria</p>
+                    <p>Enter location and desired price to find residences which fit your criteria</p>
                   </div>
                 </div>
               </div>
@@ -206,7 +206,7 @@
                   <div class="media-body py-md-4 text-center">
                     <div class="icon mb-3 d-flex align-items-center justify-content-center"><span>04</span></div>
                     <h3>Close the Deal</h3>
-                    <p>Congradulations! Now you have an affordable place to live in</p>
+                    <p>Congratulations! Now you have an affordable place to live in</p>
                   </div>
                 </div>
               </div>
