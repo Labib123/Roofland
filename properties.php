@@ -40,12 +40,12 @@
 	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
-                Username
+                cym123
               </a>
               <div class="dropdown-menu">
                 <a class="dropdown-item" href="profileApplicant.php">Profile</a>
                 <a class="dropdown-item" href="applicantApplication.php">My Application</a>
-                <a class="dropdown-item" href="#">Logout</a>
+                <a class="dropdown-item" href="login.php">Logout</a>
               </div>
             </li>
 	        </ul>
