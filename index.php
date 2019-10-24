@@ -216,7 +216,7 @@
       </div>
     </section>
 
-
+<br>
       <!-- Design to show total estimated clients and residences  -->
       <section class="ftco-counter img" id="section-counter">
         <div class="container">

@@ -73,7 +73,7 @@
               <div class="tab-content">
                 <div id="single">
                   <h1 class='booking-header' style="color:white;">Setup Residence</h1>
-                  <form action = "connectDB.php" method="post">
+                  <form action = "residenceTable.php" method="post">
                     <div class="form-row">
                       <div class="col">
                         <div class="field-wrap-setup"> <!-- Residence Name -->
@@ -108,13 +108,13 @@
                       <div class="col">
                         <div class="field-wrap-setup"> <!-- Number of Units -->
                           <input type="number" required id="numofUnits" name="numOfUnit"
-                                 spellcheck="false" placeholder="Number of Units" style="color:white;">
+                                 spellcheck="false" placeholder="Number of Units" style="color:white;" min="1">
                         </div>
                       </div>
                       <div class="col">
                         <div class="field-wrap-setup"> <!-- Monthly Rent -->
                           <input type="number" required id="monthlyRent" name="monthlyRent"
-                                spellcheck="false" placeholder="Monthly Rent (RM)" style="color:white;">
+                                spellcheck="false" placeholder="Monthly Rent (RM)" style="color:white;" min="0" max="1500">
                         </div>
                       </div>
                     </div>
@@ -122,7 +122,7 @@
                       <div class="col">
                         <div class="field-wrap-setup"> <!-- Size per Unit -->
                           <input type="number" required id="sizeperUnit" name="sizePerUnit"
-                                  spellcheck="false" placeholder="Size per Unit (sqr ft)" style="color:white;">
+                                  spellcheck="false" placeholder="Size per Unit (sqr ft)" style="color:white;" min="300">
                         </div>
                       </div>
                     </div>

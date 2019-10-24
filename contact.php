@@ -4,10 +4,7 @@
     <title>RoofLand</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700,800,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
@@ -26,34 +23,6 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
-
-    <style>
-
-        .resID{
-        width: 14.2%;
-        }
-        .resName{
-        width: 14.2%;
-        }
-        .resLocation{
-        width: 14.2%;
-        }
-        .resRent{
-        width: 14.2%;
-        }
-        .resFacility{
-        width: 14.2%;
-        }
-        .resUnit{
-        width: 14.2%;
-        }
-        .resSize{
-        width: 14.2%;
-        }
-
-    </style>
-
   </head>
 
   <body>
@@ -65,22 +34,12 @@
 	      </button>
 
         <div class="collapse navbar-collapse" id="ftco-nav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+	          <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
             <li class="nav-item"><a href="agent.php" class="nav-link">Officer</a></li>
-            <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">
-                officer123
-              </a>
-              <div class="dropdown-menu">
-                <a class="dropdown-item" href="profileApplicant.php">Profile</a>
-                <a class="dropdown-item active" href="residenceTable.php">My Residence</a>
-                <a class="dropdown-item" href="viewApplications.php">My Application</a>
-                <a class="dropdown-item" href="login.php">Logout</a>
-              </div>
-            </li>
+	          <li class="nav-item active"><a href="contact.php" class="nav-link">Contact</a></li>
+            <li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -91,74 +50,83 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate pb-5 text-center">
-          	<p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>My Residence<i class="ion-ios-arrow-forward"></i></span></p>
-            <h1 class="mb-3 bread" style="color:black;">My Residence</h1>
+          	<p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Contact <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-3 bread" style="color:black;">Contact us</h1>
           </div>
         </div>
       </div>
     </section>
-    <!-- END backgrounf ans title -->
-    <br>
-		<section class="ftco-section ftco-agent">
-    	<div class="container">
-        <div class="applicationTable">
-          <?php
-          include("connectDB.php");
-          $query = "SELECT * FROM residence";
-          echo '<table class="table"> <!--table contents connected using js-->
-            <thead>
-              <tr>
-                <th class="resID">ID</th>
-                <th class="resName">Residence Name</th>
-                <th class="resLocation">Location</th>
-                <th class="resRent">Monthly Rent (RM)</th>
-                <th class="resFacility">Facilities</th>
-                <th class="resUnit">Number of Units</th>
-                <th class="resSize">Size per unit<br>(sqr ft)</th>
-                <th><a data-target="#myModal" href="setupResidence.php" >
-                  <i class="fa fa-plus" aria-hidden="true"></i>
-                </a></th>
-              </tr>
-            </thead>
-          </table>';
-
-          $results = mysqli_query($connection, $query);
-          if (mysqli_num_rows($results)>0) {
-            while ($row = $results->fetch_assoc()) {
-                $field1name = $row["residenceID"];
-                $field2name = $row["residenceName"];
-                $field3name = $row["location"];
-                $field4name = $row["price"];
-                $field5name = $row["facilities"];
-                $field6name = $row["numOfUnit"];
-                $field7name = $row["sizePerUnit"];
-
-                echo '<table class="table">
-                          <tr>
-                              <td class="resID">'.$field1name.'</td>
-                              <td class="resName">'.$field2name.'</td>
-                              <td class="resLocation">'.$field3name.'</td>
-                              <td class="resRent">'.$field4name.'</td>
-                              <td class="resFacility">'.$field5name.'</td>
-                              <td class="resUnit">'.$field6name.'</td>
-                              <td class="resSize">'.$field7name.'</td>
-                          </tr>
-                      </table>
-                      <br>';
-              }
-            }
-          ?>
+    <!-- END background and title -->
+		<section class="ftco-section contact-section">
+      <div class="container">
+        <div class="row d-flex mb-5 contact-info justify-content-center">
+        	<div class="col-md-8">
+        		<div class="row mb-5">
+              <!--Column 1: Address -->
+		          <div class="col-md-4 text-center py-4">
+		          	<div class="icon">
+		          		<span class="icon-map-o"></span>
+		          	</div>
+		            <p><span>Address:</span> 	No 15 Jalan Sri Semantan 1,
+                  Bukit Damansara,
+                  50490, Kuala Lumpur</p>
+		          </div>
+              <!--Column 2: Phone number -->
+		          <div class="col-md-4 text-center border-height py-4">
+		          	<div class="icon">
+		          		<span class="icon-mobile-phone"></span>
+		          	</div>
+		            <p><span>Phone:</span> <a href="tel://1234567920">+603 2095 8791</a></p>
+		          </div>
+              <!--Column 3: Email -->
+		          <div class="col-md-4 text-center py-4">
+		          	<div class="icon">
+		          		<span class="icon-envelope-o"></span>
+		          	</div>
+		            <p><span>Email:</span> <a href="mailto:info@helplive.com">info@yoursite.com</a></p>
+		          </div>
+		        </div>
+          </div>
+        </div> <!-- END row d-flex mb-5 contact-info justify-content-center -->
+        <!-- Send Form -->
+        <div class="row block-9 justify-content-center mb-5">
+          <div class="col-md-8 mb-md-5">
+          	<h2 class="text-center">If you got any questions <br>please do not hesitate to send us a message</h2>
+            <form action="#" class="bg-light p-5 contact-form">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Name">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Your Email">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Subject">
+              </div>
+              <div class="form-group">
+                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+              </div>
+              <div class="form-group-contact">
+                <input id='sibmitContactus' type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+              </div>
+            </form>
+          </div>
         </div>
+        <!-- Map -->
+        <!-- <div class="row justify-content-center">
+        	<div class="col-md-10">
+        		<div id="map" class="bg-white"></div>
+        	</div>
+        </div> -->
       </div>
     </section>
-    <!-- Footer -->
+    <!--END ftco-section contact-section -->
     <footer class="ftco-footer ftco-section">
       <div class="container">
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">RoofLand</h2>
-              <p>Convenience within the comforts of home</p>
+              <p>Homes right at your fingertips</p>
               <ul class="ftco-footer-social list-unstyled mt-5">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -226,25 +194,4 @@
   <script src="js/main.js"></script>
 
   </body>
-  <!-- <script type="text/javascript">
-  var table = document.getElementById('table') ;
-  // populate table's rows in JavaScript array
-  var array = [
-             [1,'R123','Prima 16 Condominium','Johor',2,850,1000,'Gym <br> Swimming pool','<i class="fas fa-check"></i>'],
-             [2,'R908','Twins','Selangor',3,1500,1200,'Swimming Pool <br> Cafeteria','<i class="fas fa-check"></i>'] ,
-             [3,'R675','The ARC','Kuala Lumpur',2,1500,2000,'Cafeteria','<i class="far fa-times-circle"></i>']] ;
-   for(var i = 0; i < array.length; i++)
-            {
-                // create a new row
-                var newRow = table.insertRow(table.length);
-                for(var j = 0; j < array[i].length; j++)
-                {
-                    // create a new cell
-                    var cell = newRow.insertCell(j);
-
-                    // add value to the cell
-                    cell.innerHTML = array[i][j];
-                }
-            }
-  </script> -->
 </html>
