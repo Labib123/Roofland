@@ -79,14 +79,14 @@
                   <!-- First Name -->
                     <div class="form-group">
                       <label>Full Name</label>
-                      <input id='applicantName' type="text" class="form-control" placeholder="John Peter (auto)">
+                      <input id='applicantName' type="text" class="form-control" placeholder="Labib Mansour (auto)" disabled>
                     </div>
                 </div>
                 <div class="col-6">
                   <!-- Last Name -->
                     <div class="form-group">
                       <label>Username</label>
-                      <input id='applicantUsername' type="text" class="form-control" placeholder="jp101 (auto)">
+                      <input id='applicantUsername' type="text" class="form-control" placeholder="lm101 (auto)" disabled>
                     </div>
                 </div>
               </div>
@@ -96,14 +96,14 @@
                   <!-- Email -->
                     <div class="form-group">
                       <label>Email</label>
-                      <input id='email' type="text" class="form-control" placeholder="jpeter@gmail.com (auto)">
+                      <input id='email' type="text" class="form-control" placeholder="laibo@gmail.com (auto)" disabled>
                     </div>
                 </div>
                 <div class="col-6">
                   <!-- Monthly Income -->
                     <div class="form-group">
                       <label>Salary (RM)</label>
-                      <input id='salary' type="text" class="form-control" placeholder="xxxx (auto)">
+                      <input id='salary' type="text" class="form-control" placeholder="xxxx (auto)" disabled>
                     </div>
                 </div>
               </div>
@@ -113,14 +113,14 @@
                   <!-- ResidenceID -->
                   <div class="form-group">
                     <label>ResidenceID</label>
-                    <input id='residenceID' type="text" class="form-control" placeholder="R14529 (auto)">
+                    <input id='residenceID' type="text" class="form-control" placeholder="R14529 (auto)" disabled>
                   </div>
                 </div>
                 <div class="col-6">
                   <!-- Residence Name -->
                     <div class="form-group">
                       <label>Residence Name</label>
-                      <input id='residenceName' type="text" class="form-control" placeholder="Prima 16 Condominium (auto)">
+                      <input id='residenceName' type="text" class="form-control" placeholder="Prima 16 Condominium (auto)" disabled>
                     </div>
                 </div>
               </div>
@@ -130,14 +130,14 @@
                   <!-- Monthly Rent -->
                     <div class="form-group">
                       <label>Monthly Rent (RM)</label>
-                      <input id='monthRent' type="text" class="form-control" placeholder="xxxx (auto)">
+                      <input id='monthRent' type="text" class="form-control" placeholder="xxxx (auto)" disabled>
                     </div>
                 </div>
                 <div class="col-6">
                   <!-- Number of Units Available -->
                   <div class="form-group">
                     <label>Number of Units</label>
-                    <input id='noOfUnitAvai' type="text" class="form-control" placeholder="xx (auto)">
+                    <input id='noOfUnitAvai' type="text" class="form-control" placeholder="xx (auto)" disabled>
                   </div>
                 </div>
               </div>
@@ -147,14 +147,14 @@
                   <!-- Start Date -->
                   <div class="form-group">
                     <label>Start Date</label>
-                    <input id='startDate' type="date" class="form-control" placeholder="dd/mm/yyyy" min="2019-01-01" max="2090-12-31">
+                    <input id='startDate' type="date" class="form-control" placeholder="dd/mm/yyyy" min="2019-01-01" max="2090-12-31" required>
                   </div>
                 </div>
                 <div class="col-6">
                   <!-- End Date -->
                   <div class="form-group">
                     <label>End date</label>
-                    <input id='endDate' type="date" class="form-control" placeholder="dd/mm/yyyy" min="2019-01-01" max="2090-12-31">
+                    <input id='endDate' type="date" class="form-control" placeholder="dd/mm/yyyy" min="2019-01-01" max="2090-12-31" required>
                   </div>
                 </div>
               </div>
@@ -162,7 +162,7 @@
               <!--Month and Year -->
               <div class="form-group">
                 <label>Month and Year</label>
-                <input id='montYear' type="month" class="form-control">
+                <input id='montYear' type="month" class="form-control" required>
               </div>
               <label> </label>
 
