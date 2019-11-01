@@ -52,7 +52,7 @@ include("connectDB.php");
               </a>
               <div class="dropdown-menu">
                 <a class="dropdown-item active" href="profileApplicant.php">Profile</a>
-                <a class="dropdown-item" href="applicantApplication.php">My Application</a>
+                <a class="dropdown-item" href="applicantApplication.php">My Applications</a>
                 <a class="dropdown-item" href="logout.php" <?=$_SESSION['username'];?>>Logout</a>
               </div>
 	  </nav>
@@ -62,8 +62,8 @@ include("connectDB.php");
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate pb-5 text-center">
-          	<p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span> My Application <i class="ion-ios-arrow-forward"></i></span></p>
-            <h1 class="mb-3 bread" style="color:black;">My Application</h1>
+          	<p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span> My Applications <i class="ion-ios-arrow-forward"></i></span></p>
+            <h1 class="mb-3 bread" style="color:black;">My Applications</h1>
           </div>
         </div>
       </div>

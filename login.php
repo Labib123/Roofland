@@ -83,7 +83,7 @@ include("connectDB.php");
                           </div>
                           <p class="forgot"><a href="#">Forgot Password?</a></p>
                           <!-- <a href="profileHousingOfficer.php"> -->
-                          <button class="button button-block" type="submit" name="login_applicant">Log In</button>
+                          <button class="button button-block" type="submit" name="login_applicant" >Log In</button>
                           <!-- </a> -->
                           </form>
                         </div>
@@ -118,7 +118,7 @@ include("connectDB.php");
                               </select>
                               <div class="field-wrap"></div>
                               <div class="">
-                                <button type="submit" class=" button button-block" name="applicant_reg">Get Started</button>
+                                <button type="submit" class=" button button-block" onclick="alert_signup()" name="applicant_reg">Get Started</button>
 
                               </div>
                             </div>
@@ -209,9 +209,9 @@ include("connectDB.php");
 <script>
 
 // // // Code to show show_alert
-// function alert_signup() {
-//   alert("Applicant successfully registered");
-// }
+function alert_signup() {
+  alert("Applicant successfully registered");
+}
 //
 
 
