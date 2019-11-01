@@ -60,7 +60,7 @@
         <div class="row no-gutters slider-text js-fullheight align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate pb-5 text-center">
           	<p class="breadcrumbs"><span class="mr-2"><a href="index.php">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Properties <i class="ion-ios-arrow-forward"></i></span></p>
-            <h1 class="mb-3 bread" style="color:black;">Property Detail</h1>
+            <h1 class="mb-3 bread" style="color:black;">Property Details</h1>
           </div>
         </div>
       </div>

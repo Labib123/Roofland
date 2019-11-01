@@ -169,7 +169,7 @@
               <div class="row"> <!-- Row BUTTONS-->
                 <div class="col-6">
                   <div class="form-group">
-                     <a href="viewApplications.php"><input id='submit' type="submit" value="Apply" class="btn btn-primary py-3 px-5"></a>
+                     <a href="viewApplications.php"><input id='submit' type="submit" value="Apply" onclick="alert_submit()" class="btn btn-primary py-3 px-5"></a>
                   </div>
                 </div>
                 <div class="col-6">
@@ -183,6 +183,14 @@
         </div>
       </div>
     </section>
+
+<script type="text/javascript">
+function alert_submit()
+{
+  alert("Applicantion submitted successfully ");
+}
+</script>
+
     <!-- END Application Form-->
     <footer class="ftco-footer ftco-section">
       <div class="container">
