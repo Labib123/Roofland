@@ -78,7 +78,7 @@ include("connectDB.php");
               <tr>
                 <th>#</th>
                 <th>ResidenceID</th>
-                <th>Unit Number </th>
+                <th>Unit available </th>
                 <th>Monthly Rent</th>
                 <th>Month</th>
                 <th>Year</th>

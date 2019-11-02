@@ -1,11 +1,11 @@
 var table = document.getElementById('table') ;
 // populate table's rows in JavaScript array
 var array = [
-             [,'R123','A1505',800,01,2020,'New'],
-             [,'R354','B67',800,08,2019,'Waitlist'] ,
-             [,'R756','C209',500,09,2019,'Appeal pending'],
-             [,'R978','103',800,07,2020,'Approved'],
-             [,'R098','C7-1-B',800,05,2020,'Rejected','<a href="addApplications.html"> <button type="button" class="btn btn-dark">Appeal</button></a>']] ;
+             [,'R123',2,800,'January',2013,'New'],
+             [,'R175',3,700,'February',2019,'Waitlist'] ,
+             [,'R400',1,600,'March',2020,'Appeal pending'],
+             [,'R567',2,1000,'April',2020,'Approved'],
+             [,'R467',2,350,'May',2020,'Rejected','<a href="addApplications.html"> <button type="button" class="btn btn-dark">Appeal</button></a>']] ;
     // The purpose of this for loop is to number the rows (e.g : if we add one row it will numeber it as 4 )
 
 for(i=0 ; i<5 ; i++){
@@ -21,8 +21,6 @@ function addApplication() {
     console.log('done')
 
     }
-
-
 
          for(var i = 0; i < array.length; i++)
            {
